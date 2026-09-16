@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Next Vork - Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #111;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-btn {
+            text-decoration: none;
+            color: #111;
+            border: 1px solid #ddd;
+            padding: 9px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .logout-btn {
+            border: none;
+            background: #111;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: calc(100vh - 75px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+            padding: 60px 7%;
+            background: linear-gradient(
+                135deg,
+                #ffffff 0%,
+                #f4fbff 100%
+            );
+        }
+
+        .hero-content h1 {
+            font-size: clamp(40px, 5vw, 70px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero-content h1 span {
+            background: #8FE2AF;
+            padding: 0 10px;
+            border-radius: 8px;
+        }
+
+        .hero-content p {
+            max-width: 560px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            max-width: 580px;
+            display: flex;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            padding: 6px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            border: none;
+            background: #111;
+            color: #fff;
+            padding: 0 25px;
+            border-radius: 10px;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* BUTTON */
+
+        .services-btn {
+            display: inline-block;
+            margin-top: 18px;
+            background: #8FE2AF;
+            color: #111;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* IMAGE */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 580px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+
+        /* USER */
+
+        .user-name {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 50px 6%;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .search-box button {
+                height: 45px;
+            }
+
+            .login-btn,
+            .logout-btn {
+                padding: 8px 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Next Vork
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="#contact">
+            Contact Us
+        </a>
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <a href="#">
+            LinkedIn
+        </a>
+
+    </div>
+
+
+    <div class="nav-actions" id="navActions">
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            India's
+            <span>#1</span>
+            Construction App
+        </h1>
+
+        <p>
+            Quick, affordable and reliable construction
+            services at your doorstep. Find the right
+            professional for your work with Next Vork.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <form class="search-box" id="searchForm">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="What service do you need?"
+                required
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <a
+            href="services.html"
+            class="services-btn"
+        >
+            Explore Services →
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="zenzys-landing.png"
+            alt="Next Vork Construction Services"
+        >
+
+    </div>
+
+</section>
+
+
+<script>
+
+    /* CHECK LOGIN */
+
+    const loggedInUser =
+        JSON.parse(
+            localStorage.getItem("nextVorkLoggedInUser")
+        );
+
+
+    const navActions =
+        document.getElementById("navActions");
+
+
+    if (loggedInUser) {
+
+        navActions.innerHTML = `
+
+            <span class="user-name">
+                Hi, ${loggedInUser.name}
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        `;
+
+    } else {
+
+        navActions.innerHTML = `
+
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+                Login / Register
+            </a>
+
+        `;
+
+    }
+
+
+    /* LOGOUT */
+
+    function logout() {
+
+        localStorage.removeItem(
+            "nextVorkLoggedInUser"
+        );
+
+        window.location.href = "login.html";
+    }
+
+
+    /* SEARCH */
+
+    document
+        .getElementById("searchForm")
+        .addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            const service =
+                document
+                    .getElementById("searchInput")
+                    .value
+                    .trim();
+
+
+            if (!service) {
+                return;
+            }
+
+
+            window.location.href =
+                "services.html?search=" +
+                encodeURIComponent(service);
+
+        });
+
+</script>
+
+</body>
+</html>

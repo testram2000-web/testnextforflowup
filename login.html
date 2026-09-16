@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Vork - Login / Register</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f8f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: #222;
+        }
+
+        .logo span {
+            color: #45b96b;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .tabs {
+            display: flex;
+            background: #f1f4f3;
+            border-radius: 12px;
+            padding: 5px;
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            width: 50%;
+            border: none;
+            background: transparent;
+            padding: 12px;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .tab.active {
+            background: #8fe2af;
+            color: #111;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #69c98b;
+            box-shadow: 0 0 0 3px rgba(143, 226, 175, 0.18);
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            background: #8fe2af;
+            color: #111;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .btn:hover {
+            background: #78d59c;
+        }
+
+        .message {
+            display: none;
+            padding: 11px 13px;
+            border-radius: 9px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .message.error {
+            display: block;
+            background: #ffe9e9;
+            color: #c62828;
+        }
+
+        .message.success {
+            display: block;
+            background: #e7f8ed;
+            color: #218838;
+        }
+
+        /* OTP Section */
+
+        .otp-section {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f5faf7;
+            border: 1px solid #dcefe3;
+        }
+
+        .otp-demo {
+            text-align: center;
+            background: #222;
+            color: #8fe2af;
+            padding: 12px;
+            border-radius: 9px;
+            margin-bottom: 15px;
+        }
+
+        .otp-demo small {
+            display: block;
+            color: #fff;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .otp-code {
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 5px;
+        }
+
+        .verify-btn {
+            width: 100%;
+            border: none;
+            background: #8fe2af;
+            padding: 12px;
+            border-radius: 9px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .resend {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 12px;
+        }
+
+        .resend button {
+            border: none;
+            background: none;
+            color: #218838;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .resend button:disabled {
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .back-home a {
+            color: #218838;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 22px;
+            }
+
+            .logo h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <h1>Next <span>Vork</span></h1>
+    </div>
+
+    <div class="card">
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" id="loginTab" onclick="showLogin()">
+                Login
+            </button>
+
+            <button class="tab" id="registerTab" onclick="showRegister()">
+                Register
+            </button>
+        </div>
+
+
+        <!-- ================= LOGIN ================= -->
+
+        <div id="loginSection">
+
+            <h2>Welcome Back</h2>
+
+            <p class="subtitle">
+                Login using your registered mobile number
+            </p>
+
+            <div id="loginMessage" class="message"></div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        id="loginPhone"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ================= REGISTER ================= -->
+
+        <div id="registerSection" style="display:none;">
+
+            <h2>Create Account</h2>
+
+            <p class="subtitle">
+                Register with your mobile number
+            </p>
+
+            <div id="registerMessage" class="message"></div>
+
+            <form id="registerForm">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn">
+                    Send OTP
+                </button>
+
+            </form>
+
+
+            <!-- OTP SECTION -->
+
+            <div id="otpSection" class="otp-section">
+
+                <div class="otp-demo">
+
+                    <small>
+                        DEMO OTP - SMS is not actually sent
+                    </small>
+
+                    <div id="demoOtp" class="otp-code">
+                        000000
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Enter OTP</label>
+
+                    <input
+                        type="text"
+                        id="otpInput"
+                        placeholder="Enter 6-digit OTP"
+                        maxlength="6"
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="verify-btn"
+                    onclick="verifyOTP()"
+                >
+                    Verify OTP
+                </button>
+
+                <div class="resend">
+
+                    <span id="timerText">
+                        Resend OTP in 30 seconds
+                    </span>
+
+                    <button
+                        type="button"
+                        id="resendBtn"
+                        onclick="sendOTP(true)"
+                        disabled
+                    >
+                        Resend OTP
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="back-home">
+            <a href="index.html">← Back to Home</a>
+        </div>
+
+        <div class="note">
+            Next Vork - Construction & Home Services
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* ==========================================
+       LOCAL STORAGE
+    ========================================== */
+
+    let users = JSON.parse(
+        localStorage.getItem("nextVorkUsers")
+    ) || [];
+
+    let generatedOTP = "";
+    let otpTimer = null;
+    let otpTime = 30;
+
+
+    /* ==========================================
+       TAB SWITCH
+    ========================================== */
+
+    function showLogin() {
+
+        document.getElementById("loginSection").style.display = "block";
+        document.getElementById("registerSection").style.display = "none";
+
+        document.getElementById("loginTab").classList.add("active");
+        document.getElementById("registerTab").classList.remove("active");
+
+        clearMessages();
+    }
+
+
+    function showRegister() {
+
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("registerSection").style.display = "block";
+
+        document.getElementById("loginTab").classList.remove("active");
+        document.getElementById("registerTab").classList.add("active");
+
+        clearMessages();
+    }
+
+
+    /* ==========================================
+       MESSAGE
+    ========================================== */
+
+    function showMessage(elementId, message, type) {
+
+        const element = document.getElementById(elementId);
+
+        element.textContent = message;
+
+        element.className = "message " + type;
+    }
+
+
+    function clearMessages() {
+
+        document.getElementById("loginMessage").className = "message";
+        document.getElementById("registerMessage").className = "message";
+    }
+
+
+    /* ==========================================
+       PHONE VALIDATION
+    ========================================== */
+
+    function isValidPhone(phone) {
+
+        return /^[6-9]\d{9}$/.test(phone);
+    }
+
+
+    /* ==========================================
+       LOGIN
+       MOBILE NUMBER ONLY
+       NO OTP
+    ========================================== */
+
+    document.getElementById("loginForm").addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            const phone = document
+                .getElementById("loginPhone")
+                .value
+                .trim();
+
+
+            if (!isValidPhone(phone)) {
+
+                showMessage(
+                    "loginMessage",
+                    "Please enter a valid 10-digit mobile number.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            /* Find registered user */
+
+            const user = users.find(
+                function(item) {
+
+                    return item.phone === phone;
+
+                }
+            );
+
+
+            /* User not registered */
+
+            if (!user) {
+
+                showMessage(
+                    "loginMessage",
+                    "No account found with this mobile number. Please register first.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            /* Existing user - Login directly */
+
+            const loggedInUser = {
+
+                name: user.name,
+
+                phone: user.phone,
+
+                email: user.email
+
+            };
+
+
+            localStorage.setItem(
+                "nextVorkLoggedInUser",
+                JSON.stringify(loggedInUser)
+            );
+
+
+            showMessage(
+                "loginMessage",
+                "Login successful! Redirecting...",
+                "success"
+            );
+
+
+            setTimeout(
+                function() {
+
+                    window.location.href = "index.html";
+
+                },
+                700
+            );
+
+        }
+    );
+
+
+    /* ==========================================
+       REGISTER
+    ========================================== */
+
+    document.getElementById("registerForm").addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            sendOTP(false);
+
+        }
+    );
+
+
+    /* ==========================================
+       SEND OTP
+    ========================================== */
+
+    function sendOTP(isResend) {
+
+        const name = document
+            .getElementById("registerName")
+            .value
+            .trim();
+
+        const phone = document
+            .getElementById("registerPhone")
+            .value
+            .trim();
+
+        const email = document
+            .getElementById("registerEmail")
+            .value
+            .trim();
+
+
+        /* Validation */
+
+        if (!name) {
+
+            showMessage(
+                "registerMessage",
+                "Please enter your full name.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        if (!isValidPhone(phone)) {
+
+            showMessage(
+                "registerMessage",
+                "Please enter a valid 10-digit mobile number.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        if (!email || !email.includes("@")) {
+
+            showMessage(
+                "registerMessage",
+                "Please enter a valid email address.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        /* Refresh users */
+
+        users = JSON.parse(
+            localStorage.getItem("nextVorkUsers")
+        ) || [];
+
+
+        /* Check existing phone */
+
+        const existingPhone = users.find(
+            function(user) {
+
+                return user.phone === phone;
+
+            }
+        );
+
+
+        if (existingPhone && !isResend) {
+
+            showMessage(
+                "registerMessage",
+                "This mobile number is already registered. Please login.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        /* Check existing email */
+
+        const existingEmail = users.find(
+            function(user) {
+
+                return user.email.toLowerCase() === email.toLowerCase();
+
+            }
+        );
+
+
+        if (existingEmail && !isResend) {
+
+            showMessage(
+                "registerMessage",
+                "This email is already registered. Please login.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        /* Generate 6 digit OTP */
+
+        generatedOTP = Math.floor(
+            100000 + Math.random() * 900000
+        ).toString();
+
+
+        /* Show OTP */
+
+        document.getElementById("demoOtp").textContent =
+            generatedOTP;
+
+
+        document.getElementById("otpSection").style.display =
+            "block";
+
+
+        showMessage(
+            "registerMessage",
+            "Demo OTP generated. Enter the OTP shown below.",
+            "success"
+        );
+
+
+        /* Start timer */
+
+        startTimer();
+
+    }
+
+
+    /* ==========================================
+       VERIFY OTP
+    ========================================== */
+
+    function verifyOTP() {
+
+        const enteredOTP = document
+            .getElementById("otpInput")
+            .value
+            .trim();
+
+
+        if (!enteredOTP) {
+
+            showMessage(
+                "registerMessage",
+                "Please enter the OTP.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        if (enteredOTP !== generatedOTP) {
+
+            showMessage(
+                "registerMessage",
+                "Incorrect OTP. Please try again.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        const name = document
+            .getElementById("registerName")
+            .value
+            .trim();
+
+        const phone = document
+            .getElementById("registerPhone")
+            .value
+            .trim();
+
+        const email = document
+            .getElementById("registerEmail")
+            .value
+            .trim();
+
+
+        /* Create new user */
+
+        const newUser = {
+
+            name: name,
+
+            phone: phone,
+
+            email: email
+
+        };
+
+
+        users.push(newUser);
+
+
+        localStorage.setItem(
+            "nextVorkUsers",
+            JSON.stringify(users)
+        );
+
+
+        /* Auto login */
+
+        localStorage.setItem(
+            "nextVorkLoggedInUser",
+            JSON.stringify(newUser)
+        );
+
+
+        showMessage(
+            "registerMessage",
+            "Registration successful! Redirecting...",
+            "success"
+        );
+
+
+        clearInterval(otpTimer);
+
+
+        setTimeout(
+            function() {
+
+                window.location.href = "index.html";
+
+            },
+            800
+        );
+
+    }
+
+
+    /* ==========================================
+       OTP TIMER
+    ========================================== */
+
+    function startTimer() {
+
+        clearInterval(otpTimer);
+
+        otpTime = 30;
+
+        const resendBtn =
+            document.getElementById("resendBtn");
+
+        const timerText =
+            document.getElementById("timerText");
+
+
+        resendBtn.disabled = true;
+
+
+        timerText.textContent =
+            "Resend OTP in " + otpTime + " seconds";
+
+
+        otpTimer = setInterval(
+            function() {
+
+                otpTime--;
+
+
+                if (otpTime <= 0) {
+
+                    clearInterval(otpTimer);
+
+                    timerText.textContent =
+                        "You can request a new OTP";
+
+                    resendBtn.disabled = false;
+
+                    return;
+                }
+
+
+                timerText.textContent =
+                    "Resend OTP in " + otpTime + " seconds";
+
+            },
+            1000
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
