@@ -1,0 +1,452 @@
+/* =========================================
+   PAYMENT SUCCESS PAGE
+========================================= */
+
+.success-page {
+    background: #F4F7FC;
+    min-height: calc(100vh - 80px);
+    padding: 60px 0 70px;
+}
+
+.success-page .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================
+   SUCCESS CARD
+========================================= */
+
+.success-card {
+    background: #FFFFFF;
+    border: 1px solid #E4E8F0;
+    border-radius: 20px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(2, 20, 75, 0.07);
+}
+
+
+/* =========================================
+   SUCCESS ICON
+========================================= */
+
+.success-icon {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #EAB92F;
+    color: #02144B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    font-size: 34px;
+}
+
+.success-label {
+    display: inline-block;
+    color: #75620E;
+    background: #FFF8D9;
+    border-radius: 30px;
+    padding: 7px 13px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.success-card h1 {
+    color: #02144B;
+    font-size: 34px;
+    margin: 18px 0 10px;
+}
+
+.success-message {
+    max-width: 540px;
+    margin: 0 auto;
+    color: #70798B;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOOKING REFERENCE
+========================================= */
+
+.booking-reference {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    background: #F4F7FC;
+    border-radius: 10px;
+    padding: 14px 25px;
+    margin-top: 25px;
+}
+
+.booking-reference span {
+    color: #8A93A3;
+    font-size: 10px;
+}
+
+.booking-reference strong {
+    color: #02144B;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.success-divider {
+    height: 1px;
+    background: #E6E9F0;
+    margin: 30px 0;
+}
+
+
+/* =========================================
+   BOOKING DETAILS
+========================================= */
+
+.booking-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F8F9FC;
+    border-radius: 11px;
+    padding: 14px;
+}
+
+.detail-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #02144B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-content {
+    min-width: 0;
+}
+
+.detail-content span {
+    display: block;
+    color: #8A93A3;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.detail-content strong {
+    display: block;
+    color: #263044;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   PAYMENT SUMMARY
+========================================= */
+
+.payment-summary {
+    background: #02144B;
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 22px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.summary-header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.paid-badge {
+    background: #EAB92F;
+    color: #02144B;
+    border-radius: 6px;
+    padding: 6px 9px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.paid-badge i {
+    margin-right: 3px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.summary-row span {
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+}
+
+.summary-row strong {
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.summary-row:first-of-type strong {
+    color: #EAB92F;
+    font-size: 19px;
+}
+
+.success-text {
+    color: #EAB92F !important;
+}
+
+
+/* =========================================
+   NEXT STEP
+========================================= */
+
+.next-step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    text-align: left;
+    background: #FFF9E7;
+    border: 1px solid #F1E0A3;
+    border-radius: 12px;
+    padding: 17px;
+    margin-top: 20px;
+}
+
+.next-step-icon {
+    color: #C99B00;
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.next-step-card h3 {
+    color: #6D5B18;
+    font-size: 13px;
+    margin: 0 0 5px;
+}
+
+.next-step-card p {
+    color: #796A2B;
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.success-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    flex: 1;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: #EAB92F;
+    color: #02144B;
+    border: none;
+}
+
+.primary-btn:hover {
+    background: #DCAE24;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: #FFFFFF;
+    color: #02144B;
+    border: 1px solid #D7DDE8;
+}
+
+.secondary-btn:hover {
+    background: #F4F7FC;
+}
+
+.primary-btn i,
+.secondary-btn i {
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   HOME LINK
+========================================= */
+
+.home-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: #70798B;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.home-link:hover {
+    color: #02144B;
+}
+
+.home-link i {
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   TRUST NOTE
+========================================= */
+
+.trust-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: #8A93A3;
+    font-size: 10px;
+}
+
+.trust-note i {
+    color: #02144B;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #02144B;
+    color: #FFFFFF;
+    padding: 40px 0 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 25px;
+}
+
+.footer h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.footer h3 span {
+    color: #EAB92F;
+}
+
+.footer p {
+    margin: 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #EAB92F;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .success-page {
+        padding: 35px 0 50px;
+    }
+
+    .success-card {
+        padding: 30px 20px;
+    }
+
+    .success-card h1 {
+        font-size: 28px;
+    }
+
+    .booking-details {
+        grid-template-columns: 1fr;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}

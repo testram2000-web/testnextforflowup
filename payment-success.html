@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmed | Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment-success.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Next <span>Vork</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+
+            <a href="my-bookings.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                My Bookings
+            </a>
+
+            <span class="user-name" id="userName"></span>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SUCCESS PAGE ================= -->
+
+<main class="success-page">
+
+    <div class="container">
+
+
+        <!-- Success Card -->
+
+        <section class="success-card">
+
+
+            <!-- Success Icon -->
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <span class="success-label">
+                PAYMENT SUCCESSFUL
+            </span>
+
+
+            <h1>
+                Booking Confirmed!
+            </h1>
+
+
+            <p class="success-message">
+
+                Your payment has been completed successfully
+                and your service booking has been confirmed.
+
+            </p>
+
+
+            <!-- Booking Reference -->
+
+            <div class="booking-reference">
+
+                <span>
+                    Booking Reference
+                </span>
+
+                <strong id="bookingId">
+                    --
+                </strong>
+
+            </div>
+
+
+            <!-- Divider -->
+
+            <div class="success-divider"></div>
+
+
+            <!-- Booking Details -->
+
+            <div class="booking-details">
+
+
+                <!-- Service -->
+
+                <div class="detail-row">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                    </div>
+
+                    <div class="detail-content">
+
+                        <span>
+                            Service
+                        </span>
+
+                        <strong id="serviceName">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Professional -->
+
+                <div class="detail-row">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                    </div>
+
+                    <div class="detail-content">
+
+                        <span>
+                            Professional
+                        </span>
+
+                        <strong id="professionalName">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Date -->
+
+                <div class="detail-row">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                    </div>
+
+                    <div class="detail-content">
+
+                        <span>
+                            Service Date
+                        </span>
+
+                        <strong id="serviceDate">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="detail-row">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div class="detail-content">
+
+                        <span>
+                            Preferred Time
+                        </span>
+
+                        <strong id="serviceTime">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="detail-row">
+
+                    <div class="detail-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div class="detail-content">
+
+                        <span>
+                            Service Location
+                        </span>
+
+                        <strong id="serviceLocation">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Payment Summary -->
+
+            <div class="payment-summary">
+
+
+                <div class="summary-header">
+
+                    <h2>
+                        Payment Details
+                    </h2>
+
+                    <span class="paid-badge">
+                        <i class="fa-solid fa-check"></i>
+                        PAID
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Amount Paid
+                    </span>
+
+                    <strong id="amountPaid">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Payment Method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Payment Status
+                    </span>
+
+                    <strong class="success-text">
+                        Successful
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- What's Next -->
+
+            <div class="next-step-card">
+
+                <div class="next-step-icon">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        What happens next?
+                    </h3>
+
+                    <p>
+                        Your booking is now confirmed. You can track
+                        the booking status and view all booking details
+                        from My Bookings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Actions -->
+
+            <div class="success-actions">
+
+                <button
+                    class="primary-btn"
+                    id="viewBookingBtn"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    View Booking
+
+                </button>
+
+
+                <button
+                    class="secondary-btn"
+                    id="myBookingsBtn"
+                >
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    My Bookings
+
+                </button>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="home-link"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+
+        </section>
+
+
+        <!-- Trust Note -->
+
+        <div class="trust-note">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>
+                Your booking and payment information is securely stored.
+            </span>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h3>
+                    Next <span>Vork</span>
+                </h3>
+
+                <p>
+                    Find trusted construction professionals
+                    for your next project.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/payment-success.js"></script>
+
+</body>
+
+</html>
