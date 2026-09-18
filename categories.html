@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Next Vork - Categories</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/categories.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     NAVBAR
+====================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <!-- Navigation -->
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="categories.html" class="active">
+                Service
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+        </nav>
+
+
+        <!-- User -->
+
+        <div class="nav-user">
+
+            <span id="welcomeUser">
+                Welcome
+            </span>
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================
+     HERO
+====================================== -->
+
+<section class="category-hero">
+ 
+    <div class="hero-container">
+
+        <span class="hero-label">
+            NEXT VORK SERVICES
+        </span>
+
+        <h1>
+            Find the Right Professional
+        </h1>
+
+        <p>
+            Choose a category and find trusted professionals
+            for your construction needs.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     MAIN
+====================================== -->
+
+<main class="main-container">
+
+
+    <!-- Search -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="text"
+                id="categorySearch"
+                placeholder="Search categories..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Heading -->
+
+    <section class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                EXPLORE
+            </span>
+
+            <h2>
+                Construction Categories
+            </h2>
+
+        </div>
+
+        <p>
+            Select a category to explore available professionals.
+        </p>
+
+    </section>
+
+
+
+    <!-- Category Grid -->
+
+    <section class="categories-section">
+
+        <div
+            id="categoryGrid"
+            class="category-grid"
+        >
+
+
+            <!-- =================================
+                 ARCHITECT
+            ================================== -->
+
+            <article
+                class="category-card"
+                data-search="architect architecture building design"
+                onclick="openCategory('Architect')"
+            >
+
+                <div class="category-icon">
+
+                    <span>
+                        🏛️
+                    </span>
+
+                </div>
+
+                <div class="category-content">
+
+                    <h3>
+                        Architect
+                    </h3>
+
+                    <p>
+                        Building plans, architectural design
+                        and project planning.
+                    </p>
+
+                    <span class="view-link">
+                        Explore Professionals
+                        <span>→</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 STRUCTURAL ENGINEER
+            ================================== -->
+
+            <article
+                class="category-card"
+                data-search="structural engineer structure structural design"
+                onclick="openCategory('Structural Engineer')"
+            >
+
+                <div class="category-icon">
+
+                    <span>
+                        📐
+                    </span>
+
+                </div>
+
+                <div class="category-content">
+
+                    <h3>
+                        Structural Engineer
+                    </h3>
+
+                    <p>
+                        Structural planning, analysis
+                        and engineering services.
+                    </p>
+
+                    <span class="view-link">
+                        Explore Professionals
+                        <span>→</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 CONTRACTOR
+            ================================== -->
+
+            <article
+                class="category-card"
+                data-search="contractor construction building project"
+                onclick="openCategory('Contractor')"
+            >
+
+                <div class="category-icon">
+
+                    <span>
+                        🏗️
+                    </span>
+
+                </div>
+
+                <div class="category-content">
+
+                    <h3>
+                        Contractor
+                    </h3>
+
+                    <p>
+                        Construction execution, project
+                        management and supervision.
+                    </p>
+
+                    <span class="view-link">
+                        Explore Professionals
+                        <span>→</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 SKILLED WORKERS
+            ================================== -->
+
+            <article
+                class="category-card"
+                data-search="skilled workers worker mason construction labour"
+                onclick="openCategory('Skilled Workers')"
+            >
+
+                <div class="category-icon">
+
+                    <span>
+                        👷
+                    </span>
+
+                </div>
+
+                <div class="category-content">
+
+                    <h3>
+                        Skilled Workers
+                    </h3>
+
+                    <p>
+                        Skilled workers for construction
+                        and building requirements.
+                    </p>
+
+                    <span class="view-link">
+                        Explore Professionals
+                        <span>→</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 PAINTER / INTERIOR
+            ================================== -->
+
+            <article
+                class="category-card"
+                data-search="painter interior painting interior design"
+                onclick="openCategory('Painter / Interior Team')"
+            >
+
+                <div class="category-icon">
+
+                    <span>
+                        🎨
+                    </span>
+
+                </div>
+
+                <div class="category-content">
+
+                    <h3>
+                        Painter / Interior Team
+                    </h3>
+
+                    <p>
+                        Painting, interior work and
+                        finishing services.
+                    </p>
+
+                    <span class="view-link">
+                        Explore Professionals
+                        <span>→</span>
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- No Results -->
+
+        <div
+            id="noResults"
+            class="no-results hidden"
+        >
+
+            <div class="no-results-icon">
+                🔍
+            </div>
+
+            <h3>
+                No categories found
+            </h3>
+
+            <p>
+                Try searching with another keyword.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+====================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <img
+                src="images/logo.png"
+                alt="Next Vork"
+            >
+
+            <p>
+                Connecting you with construction professionals.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Next Vork. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JavaScript -->
+
+<script src="js/categories.js"></script>
+
+</body>
+
+</html>

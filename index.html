@@ -2,425 +2,820 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Next Vork - Home</title>
+    <title>Next Vork - Construction Services</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta
+        name="description"
+        content="Find trusted construction professionals and book services with Next Vork."
+    >
 
-    <style>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #fff;
-            color: #111;
-        }
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-        /* NAVBAR */
-
-        nav {
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 7%;
-            border-bottom: 1px solid #eee;
-            background: #fff;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #000;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .login-btn {
-            text-decoration: none;
-            color: #111;
-            border: 1px solid #ddd;
-            padding: 9px 16px;
-            border-radius: 10px;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .logout-btn {
-            border: none;
-            background: #111;
-            color: #fff;
-            padding: 10px 16px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: calc(100vh - 75px);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 50px;
-            padding: 60px 7%;
-            background: linear-gradient(
-                135deg,
-                #ffffff 0%,
-                #f4fbff 100%
-            );
-        }
-
-        .hero-content h1 {
-            font-size: clamp(40px, 5vw, 70px);
-            line-height: 1.08;
-            margin-bottom: 22px;
-        }
-
-        .hero-content h1 span {
-            background: #8FE2AF;
-            padding: 0 10px;
-            border-radius: 8px;
-        }
-
-        .hero-content p {
-            max-width: 560px;
-            font-size: 17px;
-            line-height: 1.7;
-            color: #666;
-            margin-bottom: 32px;
-        }
-
-        /* SEARCH */
-
-        .search-box {
-            max-width: 580px;
-            display: flex;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 14px;
-            padding: 6px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
-        }
-
-        .search-box input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 14px;
-            font-family: inherit;
-            font-size: 14px;
-        }
-
-        .search-box button {
-            border: none;
-            background: #111;
-            color: #fff;
-            padding: 0 25px;
-            border-radius: 10px;
-            font-family: inherit;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /* BUTTON */
-
-        .services-btn {
-            display: inline-block;
-            margin-top: 18px;
-            background: #8FE2AF;
-            color: #111;
-            text-decoration: none;
-            padding: 13px 22px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* IMAGE */
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 580px;
-            border-radius: 25px;
-            object-fit: cover;
-        }
-
-        /* USER */
-
-        .user-name {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        @media (max-width: 900px) {
-
-            nav {
-                padding: 0 5%;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 50px 6%;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .hero-content h1 {
-                font-size: 42px;
-            }
-
-            .search-box {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .search-box button {
-                height: 45px;
-            }
-
-            .login-btn,
-            .logout-btn {
-                padding: 8px 10px;
-            }
-        }
-
-    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
 
-<!-- NAVBAR -->
+    <header class="navbar">
 
-<nav>
+        <div class="nav-container">
 
-    <div class="logo">
-        Next Vork
-    </div>
+            <!-- Logo -->
+            <a href="index.html" class="brand">
 
+                <img
+                    src="images/logo.png"
+                    alt="NextVork Logo"
+                    class="brand-logo"
+                >
 
-    <div class="nav-links">
+                <span class="brand-name">
+                    NEXT<strong>VORK</strong>
+                </span>
 
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="services.html">
-            Services
-        </a>
-
-        <a href="#contact">
-            Contact Us
-        </a>
-
-        <a href="#">
-            Instagram
-        </a>
-
-        <a href="#">
-            LinkedIn
-        </a>
-
-    </div>
-
-
-    <div class="nav-actions" id="navActions">
-
-    </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h1>
-            India's
-            <span>#1</span>
-            Construction App
-        </h1>
-
-        <p>
-            Quick, affordable and reliable construction
-            services at your doorstep. Find the right
-            professional for your work with Next Vork.
-        </p>
-
-
-        <!-- SEARCH -->
-
-        <form class="search-box" id="searchForm">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="What service do you need?"
-                required
-            >
-
-            <button type="submit">
-                Search
-            </button>
-
-        </form>
-
-
-        <a
-            href="services.html"
-            class="services-btn"
-        >
-            Explore Services →
-        </a>
-
-    </div>
-
-
-    <div class="hero-image">
-
-        <img
-            src="zenzys-landing.png"
-            alt="Next Vork Construction Services"
-        >
-
-    </div>
-
-</section>
-
-
-<script>
-
-    /* CHECK LOGIN */
-
-    const loggedInUser =
-        JSON.parse(
-            localStorage.getItem("nextVorkLoggedInUser")
-        );
-
-
-    const navActions =
-        document.getElementById("navActions");
-
-
-    if (loggedInUser) {
-
-        navActions.innerHTML = `
-
-            <span class="user-name">
-                Hi, ${loggedInUser.name}
-            </span>
-
-            <button
-                class="logout-btn"
-                onclick="logout()"
-            >
-                Logout
-            </button>
-
-        `;
-
-    } else {
-
-        navActions.innerHTML = `
-
-            <a
-                href="login.html"
-                class="login-btn"
-            >
-                Login / Register
             </a>
 
-        `;
 
-    }
+            <!-- Desktop Navigation -->
 
+            <nav class="nav-links">
 
-    /* LOGOUT */
+                <a href="index.html" class="active">
+                    Home
+                </a>
 
-    function logout() {
+                <a href="categories.html">
+                    Services
+                </a>
 
-        localStorage.removeItem(
-            "nextVorkLoggedInUser"
-        );
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
 
-        window.location.href = "login.html";
-    }
-
-
-    /* SEARCH */
-
-    document
-        .getElementById("searchForm")
-        .addEventListener("submit", function(e) {
-
-            e.preventDefault();
-
-            const service =
-                document
-                    .getElementById("searchInput")
-                    .value
-                    .trim();
+            </nav>
 
 
-            if (!service) {
-                return;
-            }
+            <!-- Right Side -->
+
+            <div class="nav-actions">
+
+                <a href="login.html" class="login-link">
+                    Login
+                </a>
+
+                <a href="login.html" class="nav-button">
+                    Get Started
+                </a>
+
+            </div>
 
 
-            window.location.href =
-                "services.html?search=" +
-                encodeURIComponent(service);
+            <!-- Mobile Menu -->
 
-        });
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open Menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-</script>
+        </div>
+
+
+        <!-- Mobile Navigation -->
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="categories.html">
+                Services
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+                <!-- Hero Content -->
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Trusted Construction Services
+                    </div>
+
+
+                    <h1>
+                        Build Your
+                        <span>Dream.</span>
+                        <br>
+                        We'll Find the
+                        <span>Right Team.</span>
+                    </h1>
+
+
+                    <p>
+                        Find trusted architects, engineers, contractors,
+                        skilled workers and interior professionals for
+                        your construction project.
+                    </p>
+
+
+                    <!-- Search -->
+
+                    <div class="hero-search">
+
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <input
+                            type="text"
+                            id="serviceSearch"
+                            placeholder="Search architect, engineer, painter..."
+                            autocomplete="off"
+                        >
+
+                        <button id="searchBtn">
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <!-- Popular Searches -->
+
+                    <div class="popular-searches">
+
+                        <span>Popular:</span>
+
+                        <button data-search="Architect">
+                            Architect
+                        </button>
+
+                        <button data-search="Structural Engineer">
+                            Structural Engineer
+                        </button>
+
+                        <button data-search="Contractor">
+                            Contractor
+                        </button>
+
+                        <button data-search="Painter">
+                            Painter
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Visual -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card main-hero-card">
+
+                        <div class="construction-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+
+                        <h3>
+                            Your Project,
+                            <br>
+                            Our Network.
+                        </h3>
+
+                        <p>
+                            Connect with professionals
+                            who can bring your project to life.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Floating Card -->
+
+                    <div class="floating-card top-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Verified Professionals</strong>
+                            <small>Trusted by customers</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card bottom-card">
+
+                        <div class="rating-stars">
+                            ★★★★★
+                        </div>
+
+                        <strong>
+                            4.8/5
+                        </strong>
+
+                        <small>
+                            Customer Rating
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-section">
+
+            <div class="stats-container">
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Professionals</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <div>
+                        <strong>1000+</strong>
+                        <span>Services</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>2500+</strong>
+                        <span>Bookings</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-item">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+                        <strong>4.8/5</strong>
+                        <span>Customer Rating</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories-section">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            WHAT DO YOU NEED?
+                        </span>
+
+                        <h2>
+                            Find the Right
+                            <span>Professional</span>
+                        </h2>
+
+                        <p>
+                            Choose a category and discover professionals
+                            who can help with your construction project.
+                        </p>
+
+                    </div>
+
+
+                    <a href="categories.html" class="view-all">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Category Cards -->
+
+                <div class="category-grid">
+
+
+                    <!-- Architect -->
+
+                    <a
+                        href="professionals.html?category=architect"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+
+                        <h3>
+                            Architect
+                        </h3>
+
+                        <p>
+                            Building plans, floor plans
+                            and design solutions.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- Engineer -->
+
+                    <a
+                        href="professionals.html?category=structural-engineer"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-drafting-compass"></i>
+                        </div>
+
+                        <h3>
+                            Structural Engineer
+                        </h3>
+
+                        <p>
+                            Structural design, analysis
+                            and engineering services.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- Contractor -->
+
+                    <a
+                        href="professionals.html?category=contractor"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+
+                        <h3>
+                            Contractor
+                        </h3>
+
+                        <p>
+                            Complete construction and
+                            project execution services.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- Skilled Workers -->
+
+                    <a
+                        href="professionals.html?category=skilled-workers"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-person-digging"></i>
+                        </div>
+
+                        <h3>
+                            Skilled Workers
+                        </h3>
+
+                        <p>
+                            Skilled professionals for
+                            construction work.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- Painter -->
+
+                    <a
+                        href="professionals.html?category=painter"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
+
+                        <h3>
+                            Painter
+                        </h3>
+
+                        <p>
+                            Interior, exterior and
+                            decorative painting.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <!-- Interior -->
+
+                    <a
+                        href="professionals.html?category=interior"
+                        class="category-card"
+                    >
+
+                        <div class="category-icon">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+
+                        <h3>
+                            Interior Team
+                        </h3>
+
+                        <p>
+                            Interior design, furnishing
+                            and renovation services.
+                        </p>
+
+                        <span class="category-link">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section">
+
+            <div class="section-container">
+
+                <div class="center-heading">
+
+                    <span class="section-label">
+                        SIMPLE PROCESS
+                    </span>
+
+                    <h2>
+                        How <span>Next Vork</span> Works
+                    </h2>
+
+                    <p>
+                        Find and book the right construction
+                        professional in a few simple steps.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-container">
+
+
+                    <!-- Step 1 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <h3>
+                            Search
+                        </h3>
+
+                        <p>
+                            Search for the construction
+                            service you need.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <!-- Step 2 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+
+                        <h3>
+                            Choose
+                        </h3>
+
+                        <p>
+                            Compare professionals,
+                            services and details.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <!-- Step 3 -->
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <h3>
+                            Book
+                        </h3>
+
+                        <p>
+                            Select your date, location
+                            and book your service.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="cta-container">
+
+                <div class="cta-content">
+
+                    <span class="section-label">
+                        READY TO START?
+                    </span>
+
+                    <h2>
+                        Let's Build Something
+                        <span>Great.</span>
+                    </h2>
+
+                    <p>
+                        Find the right construction professional
+                        for your project today.
+                    </p>
+
+                    <a href="categories.html" class="cta-button">
+                        Explore Services
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="cta-icon">
+
+                    <i class="fa-solid fa-city"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand footer-logo">
+
+                    <img
+                        src="images/logo.png"
+                        alt="Next Vork Logo"
+                        class="brand-logo"
+                    >
+
+                    <span class="brand-name">
+                        NEXT <strong>VORK</strong>
+                    </span>
+
+                </a>
+
+                <p>
+                    Connecting customers with trusted
+                    construction professionals.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Services
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Customer
+                </h4>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="profile.html">
+                    My Profile
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Support
+                </h4>
+
+                <a href="#">
+                    Help Center
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

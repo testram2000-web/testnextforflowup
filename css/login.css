@@ -1,0 +1,605 @@
+/* =========================================
+   NEXT VORK - LOGIN / REGISTER
+   ========================================= */
+
+:root {
+    --night-blue: #02144B;
+    --gold: #EAB92F;
+
+    --white: #FFFFFF;
+    --background: #F7F8FA;
+    --border: #E1E4E8;
+
+    --text: #20242A;
+    --muted: #6B7280;
+
+    --success: #26734D;
+    --error: #C0392B;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo-section {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+
+.logo-section a {
+    display: inline-block;
+}
+
+
+.logo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(2, 20, 75, 0.06);
+}
+
+
+/* =========================================
+   TABS
+   ========================================= */
+
+.tabs {
+    display: flex;
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--white);
+}
+
+
+.tab {
+    width: 50%;
+
+    padding: 15px 10px;
+
+    border: none;
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.tab.active {
+    color: var(--night-blue);
+    font-weight: 600;
+}
+
+
+.tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25%;
+    right: 25%;
+
+    bottom: -1px;
+
+    height: 2px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================
+   FORM SECTION
+   ========================================= */
+
+.form-section {
+    padding: 32px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.heading {
+    margin-bottom: 25px;
+}
+
+
+.heading h1 {
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: var(--night-blue);
+
+    margin-bottom: 6px;
+}
+
+
+.heading p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   FORM GROUP
+   ========================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: var(--text);
+}
+
+
+.form-group input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+
+.form-group input::placeholder {
+    color: #9AA0A6;
+}
+
+
+.form-group input:focus {
+    border-color: var(--night-blue);
+}
+
+
+/* =========================================
+   MOBILE INPUT
+   ========================================= */
+
+.mobile-input {
+    display: flex;
+
+    width: 100%;
+
+    height: 46px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    background: var(--white);
+}
+
+
+.mobile-input:focus-within {
+    border-color: var(--night-blue);
+}
+
+
+.country-code {
+    min-width: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid var(--border);
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    background: #FAFAFA;
+}
+
+
+.mobile-input input {
+    flex: 1;
+
+    height: 100%;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    padding: 0 12px;
+
+    outline: none;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+   ========================================= */
+
+.primary-btn {
+    width: 100%;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--night-blue);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+.primary-btn:hover {
+    background: #061C61;
+}
+
+
+.primary-btn:active {
+    transform: translateY(1px);
+}
+
+
+.primary-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   MESSAGES
+   ========================================= */
+
+.message {
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+.message.success {
+    color: var(--success);
+}
+
+
+.message.error {
+    color: var(--error);
+}
+
+
+/* =========================================
+   SWITCH TEXT
+   ========================================= */
+
+.switch-text {
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+.switch-text button {
+    border: none;
+
+    background: none;
+
+    color: var(--night-blue);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.switch-text button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   OTP SECTION
+   ========================================= */
+
+.otp-section {
+    margin-top: 25px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.otp-heading {
+    margin-bottom: 16px;
+}
+
+
+.otp-heading h2 {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: var(--night-blue);
+
+    margin-bottom: 5px;
+}
+
+
+.otp-heading p {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   DEMO OTP
+   ========================================= */
+
+.demo-otp {
+    margin-bottom: 17px;
+
+    padding: 10px 12px;
+
+    border: 1px dashed #D5D9E0;
+
+    border-radius: 6px;
+
+    background: #FAFAFA;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+.demo-otp strong {
+    color: var(--night-blue);
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   RESEND OTP
+   ========================================= */
+
+.resend-section {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+.text-btn {
+    border: none;
+
+    background: none;
+
+    color: var(--night-blue);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.text-btn:disabled {
+    color: #9AA0A6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   BACK HOME
+   ========================================= */
+
+.back-home {
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    color: var(--night-blue);
+
+    font-weight: 500;
+}
+
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   DEVELOPMENT NOTE
+   ========================================= */
+
+.dev-note {
+    margin-top: 10px;
+
+    font-size: 10px;
+
+    color: #9AA0A6;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .page {
+        padding: 25px 15px;
+    }
+
+
+    .logo {
+        width: 135px;
+    }
+
+
+    .form-section {
+        padding: 25px 20px;
+    }
+
+
+    .heading h1 {
+        font-size: 22px;
+    }
+
+
+    .login-card {
+        border-radius: 10px;
+    }
+
+}
