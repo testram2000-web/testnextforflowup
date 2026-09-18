@@ -62,42 +62,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
+       SAVE BOOKING HISTORY
+    ========================================= */
+
+    let bookings = JSON.parse(
+        localStorage.getItem("nextVorkBookings") || "[]"
+    );
+
+
+    const existingBooking = bookings.some(
+        item =>
+            item.bookingId === booking.bookingId
+    );
+
+
+    if (!existingBooking) {
+
+        bookings.unshift(booking);
+
+        localStorage.setItem(
+            "nextVorkBookings",
+            JSON.stringify(bookings)
+        );
+
+    }
+
+
+    /* =========================================
        BOOKING ID
     ========================================= */
 
-    document.getElementById("bookingId").textContent =
-        booking.bookingId || "--";
+    const bookingId =
+        document.getElementById("bookingId");
+
+    if (bookingId) {
+
+        bookingId.textContent =
+            booking.bookingId || "--";
+
+    }
 
 
     /* =========================================
        SERVICE
     ========================================= */
 
-    document.getElementById("serviceName").textContent =
-        booking.service?.serviceName || "--";
+    const serviceName =
+        document.getElementById("serviceName");
+
+    if (serviceName) {
+
+        serviceName.textContent =
+            booking.service?.serviceName || "--";
+
+    }
 
 
     /* =========================================
        PROFESSIONAL
     ========================================= */
 
-    document.getElementById("professionalName").textContent =
-        booking.service?.professionalName || "--";
+    const professionalName =
+        document.getElementById("professionalName");
+
+    if (professionalName) {
+
+        professionalName.textContent =
+            booking.service?.professionalName || "--";
+
+    }
 
 
     /* =========================================
        DATE
     ========================================= */
 
-    if (booking.schedule?.date) {
+    const serviceDate =
+        document.getElementById("serviceDate");
+
+
+    if (
+        serviceDate &&
+        booking.schedule?.date
+    ) {
 
         const date =
             new Date(
-                booking.schedule.date + "T00:00:00"
+                booking.schedule.date +
+                "T00:00:00"
             );
 
 
-        document.getElementById("serviceDate").textContent =
+        serviceDate.textContent =
             date.toLocaleDateString(
                 "en-IN",
                 {
@@ -114,8 +170,15 @@ document.addEventListener("DOMContentLoaded", function () {
        TIME
     ========================================= */
 
-    document.getElementById("serviceTime").textContent =
-        booking.schedule?.time || "--";
+    const serviceTime =
+        document.getElementById("serviceTime");
+
+    if (serviceTime) {
+
+        serviceTime.textContent =
+            booking.schedule?.time || "--";
+
+    }
 
 
     /* =========================================
@@ -134,16 +197,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (pincode) {
 
-        locationText +=
-            " - " + pincode;
+        if (locationText) {
+
+            locationText +=
+                " - " + pincode;
+
+        } else {
+
+            locationText =
+                pincode;
+
+        }
 
     }
 
 
-    document.getElementById(
-        "serviceLocation"
-    ).textContent =
-        locationText || "--";
+    const serviceLocation =
+        document.getElementById(
+            "serviceLocation"
+        );
+
+
+    if (serviceLocation) {
+
+        serviceLocation.textContent =
+            locationText || "--";
+
+    }
 
 
     /* =========================================
@@ -158,33 +238,50 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    document.getElementById(
-        "amountPaid"
-    ).textContent =
-        "₹" +
-        amount.toLocaleString("en-IN");
+    const amountPaid =
+        document.getElementById(
+            "amountPaid"
+        );
 
 
-    document.getElementById(
-        "paymentMethod"
-    ).textContent =
-        booking.payment?.method || "--";
+    if (amountPaid) {
+
+        amountPaid.textContent =
+            "₹" +
+            amount.toLocaleString("en-IN");
+
+    }
+
+
+    const paymentMethod =
+        document.getElementById(
+            "paymentMethod"
+        );
+
+
+    if (paymentMethod) {
+
+        paymentMethod.textContent =
+            booking.payment?.method || "--";
+
+    }
 
 
     /* =========================================
        VIEW BOOKING
     ========================================= */
 
-    document
-        .getElementById("viewBookingBtn")
-        .addEventListener(
+    const viewBookingBtn =
+        document.getElementById(
+            "viewBookingBtn"
+        );
+
+
+    if (viewBookingBtn) {
+
+        viewBookingBtn.addEventListener(
             "click",
             function () {
-
-                /*
-                 * Booking details page will read
-                 * bookingId from URL.
-                 */
 
                 window.location.href =
                     "booking-details.html?id=" +
@@ -195,14 +292,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
+    }
+
 
     /* =========================================
        MY BOOKINGS
     ========================================= */
 
-    document
-        .getElementById("myBookingsBtn")
-        .addEventListener(
+    const myBookingsBtn =
+        document.getElementById(
+            "myBookingsBtn"
+        );
+
+
+    if (myBookingsBtn) {
+
+        myBookingsBtn.addEventListener(
             "click",
             function () {
 
@@ -212,14 +317,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
+    }
+
 
     /* =========================================
        LOGOUT
     ========================================= */
 
-    document
-        .getElementById("logoutBtn")
-        .addEventListener(
+    const logoutBtn =
+        document.getElementById(
+            "logoutBtn"
+        );
+
+
+    if (logoutBtn) {
+
+        logoutBtn.addEventListener(
             "click",
             function () {
 
@@ -232,5 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
         );
+
+    }
 
 });

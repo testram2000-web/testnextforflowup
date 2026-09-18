@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings - Next Vork</title>
+
+    <link rel="stylesheet" href="css/my-bookings.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Next <span>Vork</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html" class="active">
+                    My Bookings
+                </a>
+
+                <span class="user-name" id="navUserName">
+                    Hi, Customer
+                </span>
+
+                <button class="logout-btn" id="logoutBtn">
+                    Logout
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <div class="page-header-content">
+
+            <p class="section-label">
+                MY BOOKINGS
+            </p>
+
+            <h1>
+                Your Bookings
+            </h1>
+
+            <p>
+                View and manage all your service bookings in one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="bookings-container">
+
+        <!-- Booking Summary -->
+
+        <section class="booking-summary">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+                    <span>Total Bookings</span>
+                    <strong id="totalBookings">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+                    <span>Upcoming</span>
+                    <strong id="upcomingBookings">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedBookings">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FILTER TABS ================= -->
+
+        <section class="booking-section">
+
+            <div class="booking-tabs">
+
+                <button
+                    class="booking-tab active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="booking-tab"
+                    data-filter="upcoming"
+                >
+                    Upcoming
+                </button>
+
+                <button
+                    class="booking-tab"
+                    data-filter="completed"
+                >
+                    Completed
+                </button>
+
+                <button
+                    class="booking-tab"
+                    data-filter="cancelled"
+                >
+                    Cancelled
+                </button>
+
+            </div>
+
+
+            <!-- ================= BOOKINGS LIST ================= -->
+
+            <div id="bookingsList" class="bookings-list">
+                <!-- Booking cards will be added by JavaScript -->
+            </div>
+
+
+            <!-- ================= EMPTY STATE ================= -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+                style="display: none;"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-regular fa-calendar-xmark"></i>
+                </div>
+
+                <h2>
+                    No Bookings Found
+                </h2>
+
+                <p>
+                    You haven't made any bookings in this section yet.
+                </p>
+
+                <a href="categories.html" class="primary-btn">
+                    Browse Services
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>
+                    Next <span>Vork</span>
+                </h2>
+
+                <p>
+                    Find trusted construction professionals
+                    for your next project.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/my-bookings.js"></script>
+
+</body>
+</html>
