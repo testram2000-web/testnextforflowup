@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment | Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Next <span>Vork</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+
+            <a href="my-bookings.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                My Bookings
+            </a>
+
+            <span class="user-name" id="userName"></span>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="payment-header">
+
+    <div class="container">
+
+        <span class="section-label">
+            SECURE PAYMENT
+        </span>
+
+        <h1>Complete Your Payment</h1>
+
+        <p>
+            Choose your preferred payment method and complete your booking.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="payment-page">
+
+    <div class="container">
+
+
+        <!-- ================= PROGRESS ================= -->
+
+        <div class="payment-progress">
+
+            <div class="progress-step completed">
+
+                <div class="progress-circle">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span>Booking</span>
+
+            </div>
+
+
+            <div class="progress-line active"></div>
+
+
+            <div class="progress-step completed">
+
+                <div class="progress-circle">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span>Confirmation</span>
+
+            </div>
+
+
+            <div class="progress-line active"></div>
+
+
+            <div class="progress-step current">
+
+                <div class="progress-circle">
+                    3
+                </div>
+
+                <span>Payment</span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-circle">
+                    4
+                </div>
+
+                <span>Success</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= LAYOUT ================= -->
+
+        <div class="payment-layout">
+
+
+            <!-- ================= LEFT ================= -->
+
+            <section class="payment-method-section">
+
+
+                <!-- Payment Methods -->
+
+                <div class="payment-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Choose Payment Method</h2>
+
+                            <p>
+                                Select how you would like to pay
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- UPI -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="UPI"
+                            checked
+                        >
+
+                        <div class="payment-option-content">
+
+                            <div class="payment-icon upi-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>UPI</strong>
+
+                                <span>
+                                    Google Pay, PhonePe, Paytm and other UPI apps
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right option-arrow"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- Card -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Card"
+                        >
+
+                        <div class="payment-option-content">
+
+                            <div class="payment-icon card-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>Credit / Debit Card</strong>
+
+                                <span>
+                                    Visa, Mastercard and other cards
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right option-arrow"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- Net Banking -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Net Banking"
+                        >
+
+                        <div class="payment-option-content">
+
+                            <div class="payment-icon bank-icon">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>Net Banking</strong>
+
+                                <span>
+                                    Pay using your bank account
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right option-arrow"></i>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- Cash -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Cash on Service"
+                        >
+
+                        <div class="payment-option-content">
+
+                            <div class="payment-icon cash-icon">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </div>
+
+                            <div class="payment-info">
+
+                                <strong>Pay After Service</strong>
+
+                                <span>
+                                    Pay directly after service confirmation
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right option-arrow"></i>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <!-- UPI Demo -->
+
+                <div
+                    class="payment-card payment-input-card"
+                    id="upiSection"
+                >
+
+                    <div class="card-heading small-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>UPI Details</h2>
+
+                            <p>
+                                Enter your UPI ID
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="upiId">
+                            UPI ID
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-at"></i>
+
+                            <input
+                                type="text"
+                                id="upiId"
+                                placeholder="example@upi"
+                            >
+
+                        </div>
+
+                        <small id="upiError"></small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card Demo -->
+
+                <div
+                    class="payment-card payment-input-card hidden"
+                    id="cardSection"
+                >
+
+                    <div class="card-heading small-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Card Details</h2>
+
+                            <p>
+                                Enter your card information
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cardNumber">
+                            Card Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                placeholder="1234 5678 9012 3456"
+                                maxlength="19"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-form-grid">
+
+                        <div class="form-group">
+
+                            <label for="expiry">
+                                Expiry
+                            </label>
+
+                            <input
+                                type="text"
+                                id="expiry"
+                                placeholder="MM/YY"
+                                maxlength="5"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="cvv">
+                                CVV
+                            </label>
+
+                            <input
+                                type="password"
+                                id="cvv"
+                                placeholder="•••"
+                                maxlength="3"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cardName">
+                            Cardholder Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cardName"
+                            placeholder="Name on card"
+                        >
+
+                    </div>
+
+                    <small id="cardError"></small>
+
+                </div>
+
+
+                <!-- Security -->
+
+                <div class="security-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <strong>Secure Payment</strong>
+
+                        <p>
+                            Your payment information is protected.
+                            Never share your OTP, PIN or CVV with anyone.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pay Button -->
+
+                <button
+                    class="pay-btn"
+                    id="payBtn"
+                >
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Pay
+                    <span id="payAmount">₹0</span>
+
+                </button>
+
+
+                <p class="demo-note">
+                    Demo payment only. No real money will be charged.
+                </p>
+
+            </section>
+
+
+            <!-- ================= RIGHT ================= -->
+
+            <aside class="payment-sidebar">
+
+
+                <!-- Booking Summary -->
+
+                <div class="summary-card">
+
+                    <div class="summary-header">
+
+                        <h2>Booking Summary</h2>
+
+                        <span class="secure-badge">
+                            <i class="fa-solid fa-lock"></i>
+                            Secure
+                        </span>
+
+                    </div>
+
+
+                    <div class="service-summary">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div>
+
+                            <h3 id="serviceName">
+                                --
+                            </h3>
+
+                            <p id="professionalName">
+                                --
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            <i class="fa-solid fa-calendar"></i>
+                            Date
+                        </span>
+
+                        <strong id="bookingDate">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            Time
+                        </span>
+
+                        <strong id="bookingTime">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            City
+                        </span>
+
+                        <strong id="bookingCity">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="amount-row">
+
+                        <span>
+                            Service Amount
+                        </span>
+
+                        <strong id="serviceAmount">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="total-row">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalAmount">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking ID -->
+
+                <div class="reference-card">
+
+                    <span>
+                        Booking Reference
+                    </span>
+
+                    <strong id="bookingId">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <!-- Help -->
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Need Help?</h3>
+
+                        <p>
+                            Contact Next Vork support if you have
+                            any payment-related questions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    Next <span>Vork</span>
+                </h3>
+
+                <p>
+                    Find trusted construction professionals
+                    for your next project.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/payment.js"></script>
+
+</body>
+
+</html>

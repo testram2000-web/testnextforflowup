@@ -1,0 +1,774 @@
+/* =========================================
+   BOOKING CONFIRMATION
+========================================= */
+
+.confirmation-header {
+    background: #02144B;
+    color: #FFFFFF;
+    padding: 50px 0 60px;
+}
+
+.confirmation-header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-label {
+    color: #EAB92F;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.confirmation-header h1 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.confirmation-header p {
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.confirmation-page {
+    background: #F4F7FC;
+    padding: 40px 0 80px;
+}
+
+.confirmation-page .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.booking-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 110px;
+}
+
+.progress-step span {
+    font-size: 11px;
+    color: #8A93A3;
+    text-align: center;
+}
+
+.progress-step.completed span,
+.progress-step.current span {
+    color: #02144B;
+    font-weight: 600;
+}
+
+.progress-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #E1E5ED;
+    color: #7C8492;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.progress-step.completed .progress-circle {
+    background: #02144B;
+    color: #EAB92F;
+}
+
+.progress-step.current .progress-circle {
+    background: #EAB92F;
+    color: #02144B;
+}
+
+.progress-line {
+    width: 90px;
+    height: 2px;
+    background: #DCE1EA;
+    margin: 0 8px 28px;
+}
+
+.progress-line.active {
+    background: #02144B;
+}
+
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.confirmation-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================
+   BOOKING ID
+========================================= */
+
+.booking-id-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E4E8F0;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+}
+
+.booking-id-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: #F4F7FC;
+    color: #02144B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-id-card span {
+    display: block;
+    color: #8A93A3;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.booking-id-card strong {
+    color: #02144B;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.confirmation-card {
+    background: #FFFFFF;
+    border: 1px solid #E4E8F0;
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 20px;
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 23px;
+}
+
+.heading-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: #F4F7FC;
+    color: #02144B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-heading h2 {
+    margin: 0 0 4px;
+    color: #02144B;
+    font-size: 19px;
+}
+
+.card-heading p {
+    margin: 0;
+    color: #8A93A3;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SERVICE
+========================================= */
+
+.service-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #F4F7FC;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.service-main-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #02144B;
+    color: #EAB92F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.service-main-info h3 {
+    color: #02144B;
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.service-main-info p {
+    color: #596274;
+    margin: 0 0 9px;
+    font-size: 13px;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.service-tags span {
+    color: #70798B;
+    font-size: 11px;
+}
+
+.service-tags i {
+    color: #EAB92F;
+    margin-right: 4px;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detail-item {
+    background: #F4F7FC;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.detail-label {
+    display: block;
+    color: #8A93A3;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.detail-item strong {
+    color: #263044;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #F4F7FC;
+    border-radius: 11px;
+    padding: 17px;
+}
+
+.location-box > i {
+    color: #02144B;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.location-box strong {
+    color: #263044;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.location-box p {
+    margin: 5px 0 0;
+    color: #8A93A3;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SCHEDULE
+========================================= */
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F4F7FC;
+    padding: 16px;
+    border-radius: 11px;
+}
+
+.schedule-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #02144B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-item span {
+    display: block;
+    color: #8A93A3;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.schedule-item strong {
+    color: #02144B;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   WORK DETAILS
+========================================= */
+
+.work-details {
+    background: #F4F7FC;
+    border-radius: 10px;
+    padding: 17px;
+    color: #596274;
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+
+/* =========================================
+   IMPORTANT NOTE
+========================================= */
+
+.important-note {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    background: #FFF9E7;
+    border: 1px solid #F1E0A3;
+    border-radius: 12px;
+    padding: 17px;
+    margin-bottom: 20px;
+}
+
+.note-icon {
+    color: #C99B00;
+    margin-top: 2px;
+}
+
+.important-note h3 {
+    margin: 0 0 5px;
+    color: #6D5B18;
+    font-size: 14px;
+}
+
+.important-note p {
+    margin: 0;
+    color: #796A2B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.confirmation-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.back-btn,
+.confirm-btn {
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.back-btn {
+    flex: 0.7;
+    background: #FFFFFF;
+    color: #02144B;
+    border: 1px solid #D8DEE9;
+}
+
+.back-btn:hover {
+    background: #F4F7FC;
+}
+
+.confirm-btn {
+    flex: 1.3;
+    background: #EAB92F;
+    color: #02144B;
+    border: none;
+}
+
+.confirm-btn:hover {
+    background: #DCAE24;
+    transform: translateY(-1px);
+}
+
+.confirm-btn i,
+.back-btn i {
+    margin-left: 7px;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.confirmation-sidebar {
+    position: sticky;
+    top: 25px;
+}
+
+.price-card {
+    background: #FFFFFF;
+    border: 1px solid #E4E8F0;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.price-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.price-card-header h2 {
+    color: #02144B;
+    margin: 0;
+    font-size: 19px;
+}
+
+.price-card-header span {
+    background: #F4F7FC;
+    color: #02144B;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.price-service {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price-service span {
+    color: #8A93A3;
+    font-size: 11px;
+}
+
+.price-service strong {
+    color: #02144B;
+    font-size: 14px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.price-row span {
+    color: #70798B;
+    font-size: 13px;
+}
+
+.price-row strong {
+    color: #263044;
+    font-size: 13px;
+}
+
+.price-type {
+    font-size: 11px !important;
+    color: #8A93A3 !important;
+}
+
+.price-divider {
+    height: 1px;
+    background: #E5E8EF;
+    margin: 22px 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-row span {
+    color: #02144B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.total-row strong {
+    color: #02144B;
+    font-size: 25px;
+}
+
+.payment-note {
+    color: #8A93A3;
+    font-size: 10px;
+    line-height: 1.5;
+    margin: 15px 0 0;
+}
+
+
+/* =========================================
+   SECURE CARD
+========================================= */
+
+.secure-card,
+.help-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    border-radius: 15px;
+    padding: 19px;
+    margin-top: 18px;
+}
+
+.secure-card {
+    background: #FFFFFF;
+    border: 1px solid #E4E8F0;
+}
+
+.secure-icon,
+.help-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secure-icon {
+    background: #F4F7FC;
+    color: #02144B;
+}
+
+.secure-card h3,
+.help-card h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.secure-card h3 {
+    color: #02144B;
+}
+
+.secure-card p,
+.help-card p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.secure-card p {
+    color: #8A93A3;
+}
+
+
+/* =========================================
+   HELP
+========================================= */
+
+.help-card {
+    background: #02144B;
+    color: #FFFFFF;
+}
+
+.help-icon {
+    background: rgba(255,255,255,0.1);
+    color: #EAB92F;
+}
+
+.help-card p {
+    color: rgba(255,255,255,0.72);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #02144B;
+    color: #FFFFFF;
+    padding: 40px 0 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 25px;
+}
+
+.footer h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.footer h3 span {
+    color: #EAB92F;
+}
+
+.footer p {
+    margin: 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #EAB92F;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .confirmation-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-sidebar {
+        position: static;
+        order: -1;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .confirmation-header {
+        padding: 40px 0 45px;
+    }
+
+    .confirmation-header h1 {
+        font-size: 30px;
+    }
+
+    .booking-progress {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+
+    .progress-line {
+        width: 45px;
+    }
+
+    .confirmation-card {
+        padding: 20px;
+    }
+
+    .detail-grid,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .back-btn,
+    .confirm-btn {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
