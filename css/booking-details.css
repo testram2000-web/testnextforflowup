@@ -1,0 +1,1132 @@
+/* =========================================
+   BOOKING DETAILS PAGE
+   Next Vork
+========================================= */
+
+:root {
+    --night-blue: #02144B;
+    --gold: #EAB92F;
+    --white: #FFFFFF;
+    --light-blue: #F4F7FC;
+    --text-dark: #172033;
+    --text-light: #687386;
+    --border: #E3E8F0;
+    --success: #1E9B63;
+    --danger: #D64545;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+body {
+    background: var(--light-blue);
+    color: var(--text-dark);
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-next {
+    color: var(--night-blue);
+}
+
+.logo-vork {
+    color: var(--gold);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--night-blue);
+}
+
+.nav-user {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--night-blue);
+}
+
+.logout-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    color: #d64545;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.booking-details-header {
+    background: var(--night-blue);
+    color: var(--white);
+    padding: 45px 0 50px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+    opacity: 0.9;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.header-content h1 {
+    margin: 0 0 10px;
+
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.header-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 15px;
+}
+
+.booking-id-box {
+    min-width: 190px;
+
+    padding: 16px 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 12px;
+}
+
+.booking-id-box span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.booking-id-box strong {
+    color: var(--gold);
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.booking-details-section {
+    padding: 45px 0 70px;
+}
+
+
+/* =========================================
+   STATUS CARD
+========================================= */
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-left: 5px solid var(--success);
+
+    border-radius: 14px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 28px;
+}
+
+.status-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #EAF8F1;
+
+    color: var(--success);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.status-content span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.status-content h2 {
+    margin: 0 0 4px;
+
+    font-size: 21px;
+
+    color: var(--success);
+}
+
+.status-content p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   DETAILS CARD
+========================================= */
+
+.details-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    margin-bottom: 22px;
+}
+
+.title-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 10px;
+
+    background: #EEF2FA;
+
+    color: var(--night-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.card-title h2 {
+    margin: 0 0 4px;
+
+    font-size: 19px;
+
+    color: var(--night-blue);
+}
+
+.card-title p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SERVICE INFORMATION
+========================================= */
+
+.service-main {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--night-blue);
+
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.info-label {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.service-main h3 {
+    margin: 0 0 3px;
+
+    font-size: 19px;
+
+    color: var(--night-blue);
+}
+
+.service-main p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.info-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    padding-top: 17px;
+
+    margin-top: 17px;
+
+    border-top: 1px solid var(--border);
+}
+
+.info-item strong {
+    display: block;
+
+    color: var(--text-dark);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SCHEDULE
+========================================= */
+
+.schedule-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+.schedule-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: var(--light-blue);
+
+    border-radius: 10px;
+}
+
+.schedule-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: var(--white);
+
+    color: var(--night-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule-item span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.schedule-item strong {
+    display: block;
+
+    color: var(--night-blue);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location-box {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: var(--light-blue);
+
+    border-radius: 10px;
+}
+
+.location-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: var(--white);
+
+    color: var(--night-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.location-box h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    color: var(--text-dark);
+}
+
+.location-box p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.separator {
+    margin: 0 5px;
+}
+
+
+/* =========================================
+   WORK DETAILS
+========================================= */
+
+.work-details-box {
+    padding: 18px;
+
+    background: var(--light-blue);
+
+    border-radius: 10px;
+}
+
+.work-details-box p {
+    margin: 0;
+
+    color: var(--text-dark);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.payment-details {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.payment-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.payment-row:first-child {
+    padding-top: 0;
+}
+
+.payment-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.payment-row span {
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.payment-row strong {
+    color: var(--text-dark);
+
+    font-size: 14px;
+}
+
+.payment-row .payment-paid {
+    color: var(--success);
+}
+
+.payment-row .payment-amount {
+    color: var(--night-blue);
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 23px;
+
+    margin-bottom: 20px;
+}
+
+.sidebar-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--night-blue);
+
+    margin-bottom: 20px;
+}
+
+.sidebar-heading i {
+    color: var(--gold);
+}
+
+.sidebar-heading h3 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   PROFESSIONAL CARD
+========================================= */
+
+.professional-card {
+    text-align: center;
+}
+
+.professional-avatar {
+    width: 78px;
+    height: 78px;
+
+    margin: 5px auto 14px;
+
+    border-radius: 50%;
+
+    background: var(--night-blue);
+
+    color: var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.professional-card h2 {
+    margin: 0 0 5px;
+
+    color: var(--night-blue);
+
+    font-size: 18px;
+}
+
+.professional-card > p {
+    margin: 0 0 13px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.verified-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: #EAF8F1;
+
+    color: var(--success);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn,
+.secondary-btn {
+    width: 100%;
+
+    min-height: 45px;
+
+    border-radius: 9px;
+
+    padding: 11px 16px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    border: 1px solid var(--night-blue);
+
+    background: var(--night-blue);
+
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background: #031c63;
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    color: var(--night-blue);
+}
+
+.secondary-btn:hover {
+    border-color: var(--night-blue);
+
+    background: #F7F9FD;
+}
+
+.professional-card .secondary-btn {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   AMOUNT CARD
+========================================= */
+
+.amount-card {
+    background: var(--night-blue);
+
+    color: var(--white);
+
+    text-align: center;
+
+    border: none;
+}
+
+.amount-card span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.amount-card h2 {
+    margin: 0 0 7px;
+
+    color: var(--gold);
+
+    font-size: 28px;
+}
+
+.amount-card p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.actions-card h3 {
+    margin: 0 0 16px;
+
+    color: var(--night-blue);
+
+    font-size: 16px;
+}
+
+.full-btn {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   HELP CARD
+========================================= */
+
+.help-card {
+    display: flex;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    background: #FFF9E8;
+
+    border: 1px solid #F4E4A9;
+
+    border-radius: 12px;
+}
+
+.help-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: var(--gold);
+
+    color: var(--night-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-card h3 {
+    margin: 0 0 5px;
+
+    color: var(--night-blue);
+
+    font-size: 14px;
+}
+
+.help-card p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: var(--night-blue);
+
+    color: var(--white);
+
+    padding: 45px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo {
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+.footer-logo .logo-next {
+    color: var(--white);
+}
+
+.footer-logo .logo-vork {
+    color: var(--gold);
+}
+
+.footer-content p {
+    max-width: 330px;
+
+    margin: 12px 0 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 22px;
+
+    align-items: center;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-sidebar {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+    }
+
+    .details-sidebar .sidebar-card,
+    .details-sidebar .help-card {
+        margin-bottom: 0;
+    }
+
+    .help-card {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        min-height: auto;
+
+        padding: 16px 0;
+
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .nav-user,
+    .logout-btn {
+        font-size: 12px;
+    }
+
+    .header-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .booking-id-box {
+        width: 100%;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .schedule-grid,
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+
+    .details-sidebar {
+        display: block;
+    }
+
+    .details-sidebar .sidebar-card,
+    .details-sidebar .help-card {
+        margin-bottom: 20px;
+    }
+
+    .help-card {
+        grid-column: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .booking-details-section {
+        padding: 30px 0 50px;
+    }
+
+    .details-card {
+        padding: 18px;
+    }
+
+    .status-card {
+        padding: 18px;
+
+        align-items: flex-start;
+    }
+
+    .status-icon {
+        width: 44px;
+        height: 44px;
+
+        font-size: 19px;
+    }
+
+    .service-main {
+        align-items: flex-start;
+    }
+
+    .location-box {
+        align-items: flex-start;
+    }
+
+    .payment-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

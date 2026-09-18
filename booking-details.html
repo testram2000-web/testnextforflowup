@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Details - Next Vork</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/booking-details.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-next">Next</span>
+                <span class="logo-vork">Vork</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html" class="active">
+                    My Bookings
+                </a>
+
+                <span class="nav-user" id="navUser">
+                    Hello
+                </span>
+
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="booking-details-header">
+
+        <div class="container">
+
+            <a href="my-bookings.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to My Bookings
+            </a>
+
+            <div class="header-content">
+
+                <div>
+                    <span class="section-label">
+                        BOOKING DETAILS
+                    </span>
+
+                    <h1>
+                        Your Booking
+                    </h1>
+
+                    <p>
+                        View complete information about your service booking.
+                    </p>
+                </div>
+
+                <div class="booking-id-box">
+
+                    <span>
+                        Booking ID
+                    </span>
+
+                    <strong id="bookingId">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="booking-details-section">
+
+        <div class="container">
+
+            <!-- Status -->
+
+            <div class="status-card">
+
+                <div class="status-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div class="status-content">
+
+                    <span>
+                        Booking Status
+                    </span>
+
+                    <h2 id="bookingStatus">
+                        --
+                    </h2>
+
+                    <p id="statusMessage">
+                        Your booking information is shown below.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Main Grid -->
+
+            <div class="details-grid">
+
+                <!-- ================= LEFT ================= -->
+
+                <div class="details-main">
+
+
+                    <!-- SERVICE INFORMATION -->
+
+                    <section class="details-card">
+
+                        <div class="card-title">
+
+                            <div class="title-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Service Information
+                                </h2>
+
+                                <p>
+                                    Details about the service you booked.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-info">
+
+                            <div class="service-main">
+
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+
+                                <div>
+
+                                    <span class="info-label">
+                                        Service
+                                    </span>
+
+                                    <h3 id="serviceName">
+                                        --
+                                    </h3>
+
+                                    <p id="categoryName">
+                                        --
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="info-row">
+
+                                <div class="info-item">
+
+                                    <span class="info-label">
+                                        Professional
+                                    </span>
+
+                                    <strong id="professionalName">
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="info-item">
+
+                                    <span class="info-label">
+                                        Duration
+                                    </span>
+
+                                    <strong id="serviceDuration">
+                                        --
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="info-row">
+
+                                <div class="info-item">
+
+                                    <span class="info-label">
+                                        Pricing Type
+                                    </span>
+
+                                    <strong id="priceType">
+                                        --
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="info-item">
+
+                                    <span class="info-label">
+                                        Service Price
+                                    </span>
+
+                                    <strong id="servicePrice">
+                                        --
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= SCHEDULE ================= -->
+
+                    <section class="details-card">
+
+                        <div class="card-title">
+
+                            <div class="title-icon">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Schedule
+                                </h2>
+
+                                <p>
+                                    Your preferred service date and time.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-grid">
+
+                            <div class="schedule-item">
+
+                                <div class="schedule-icon">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Service Date
+                                    </span>
+
+                                    <strong id="serviceDate">
+                                        --
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="schedule-item">
+
+                                <div class="schedule-icon">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Preferred Time
+                                    </span>
+
+                                    <strong id="serviceTime">
+                                        --
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= LOCATION ================= -->
+
+                    <section class="details-card">
+
+                        <div class="card-title">
+
+                            <div class="title-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Service Location
+                                </h2>
+
+                                <p>
+                                    Location where the service will be provided.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="location-box">
+
+                            <div class="location-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+
+                                <span class="info-label">
+                                    Address
+                                </span>
+
+                                <h3 id="locationAddress">
+                                    --
+                                </h3>
+
+                                <p>
+                                    <span id="locationCity">
+                                        --
+                                    </span>
+
+                                    <span class="separator">
+                                        •
+                                    </span>
+
+                                    <span id="locationPincode">
+                                        --
+                                    </span>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= WORK DETAILS ================= -->
+
+                    <section class="details-card">
+
+                        <div class="card-title">
+
+                            <div class="title-icon">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Work Details
+                                </h2>
+
+                                <p>
+                                    Information provided for your service request.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="work-details-box">
+
+                            <p id="workDetails">
+                                No additional work details provided.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= PAYMENT ================= -->
+
+                    <section class="details-card">
+
+                        <div class="card-title">
+
+                            <div class="title-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Payment Information
+                                </h2>
+
+                                <p>
+                                    Payment details for this booking.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-details">
+
+                            <div class="payment-row">
+
+                                <span>
+                                    Payment Status
+                                </span>
+
+                                <strong
+                                    id="paymentStatus"
+                                    class="payment-paid"
+                                >
+                                    --
+                                </strong>
+
+                            </div>
+
+
+                            <div class="payment-row">
+
+                                <span>
+                                    Payment Method
+                                </span>
+
+                                <strong id="paymentMethod">
+                                    --
+                                </strong>
+
+                            </div>
+
+
+                            <div class="payment-row">
+
+                                <span>
+                                    Amount Paid
+                                </span>
+
+                                <strong
+                                    id="paymentAmount"
+                                    class="payment-amount"
+                                >
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+                <!-- ================= RIGHT SIDEBAR ================= -->
+
+                <aside class="details-sidebar">
+
+
+                    <!-- Professional Card -->
+
+                    <div class="sidebar-card professional-card">
+
+                        <div class="sidebar-heading">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <h3>
+                                Service Provider
+                            </h3>
+
+                        </div>
+
+
+                        <div class="professional-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <h2 id="sidebarProfessionalName">
+                            --
+                        </h2>
+
+                        <p id="sidebarProfessionalProfession">
+                            --
+                        </p>
+
+
+                        <div class="verified-badge">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Verified Professional
+
+                        </div>
+
+
+                        <button
+                            class="secondary-btn"
+                            id="viewProfessionalBtn"
+                        >
+                            <i class="fa-solid fa-user"></i>
+                            View Professional
+                        </button>
+
+                    </div>
+
+
+                    <!-- Amount Card -->
+
+                    <div class="sidebar-card amount-card">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <h2 id="sidebarAmount">
+                            ₹0
+                        </h2>
+
+                        <p id="sidebarPaymentStatus">
+                            Payment status
+                        </p>
+
+                    </div>
+
+
+                    <!-- Actions Card -->
+
+                    <div class="sidebar-card actions-card">
+
+                        <h3>
+                            Booking Actions
+                        </h3>
+
+
+                        <button
+                            class="primary-btn"
+                            id="liveStatusBtn"
+                        >
+                            <i class="fa-solid fa-location-arrow"></i>
+                            Track Service
+                        </button>
+
+
+                        <button
+                            class="secondary-btn full-btn"
+                            id="reviewBtn"
+                        >
+                            <i class="fa-regular fa-star"></i>
+                            Write a Review
+                        </button>
+
+
+                        <button
+                            class="secondary-btn full-btn"
+                            id="myBookingsBtn"
+                        >
+                            <i class="fa-solid fa-calendar-check"></i>
+                            My Bookings
+                        </button>
+
+                    </div>
+
+
+                    <!-- Help Card -->
+
+                    <div class="help-card">
+
+                        <div class="help-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Need Help?
+                            </h3>
+
+                            <p>
+                                Contact Next Vork support for booking assistance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-next">Next</span>
+                        <span class="logo-vork">Vork</span>
+                    </a>
+
+                    <p>
+                        Find trusted construction professionals for your project.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="categories.html">
+                        Categories
+                    </a>
+
+                    <a href="my-bookings.html">
+                        My Bookings
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Next Vork. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Page JS -->
+    <script src="js/booking-details.js"></script>
+
+</body>
+</html>

@@ -512,7 +512,10 @@ if (logoutBtn) {
 
 }
 
-
+viewButton.href =
+    `booking-details.html?id=${encodeURIComponent(
+        booking.bookingId || ""
+    )}`;
 /* ================= INITIAL LOAD ================= */
 
 updateSummary();
