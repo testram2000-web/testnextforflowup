@@ -1,0 +1,901 @@
+/* =========================================
+   NEXT VORK
+   SERVICE DETAILS PAGE
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #F4F7FC;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: #02144B;
+
+    padding: 14px 0;
+}
+
+
+.nav-container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo-area img {
+    height: 48px;
+
+    width: auto;
+
+    display: block;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: #FFFFFF;
+
+    font-size: 15px;
+}
+
+
+.nav-links a:hover {
+    color: #EAB92F;
+}
+
+
+.user-name {
+    color: #FFFFFF;
+
+    font-size: 14px;
+}
+
+
+.logout-btn {
+    border: 1px solid #EAB92F;
+
+    background: transparent;
+
+    color: #FFFFFF;
+
+    padding: 8px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+.logout-btn:hover {
+    background: #EAB92F;
+
+    color: #02144B;
+}
+
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.details-page {
+    padding: 35px 0 70px;
+}
+
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #02144B;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.back-link:hover {
+    color: #EAB92F;
+}
+
+
+
+/* =========================================
+   SERVICE HERO
+========================================= */
+
+.service-hero {
+    background: #02144B;
+
+    color: #FFFFFF;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+.service-icon-large {
+    width: 70px;
+
+    height: 70px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #EAB92F;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+.service-heading {
+    flex: 1;
+}
+
+
+.service-label {
+    color: #EAB92F;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+
+.service-heading h1 {
+    font-size: 30px;
+
+    margin: 6px 0 8px;
+}
+
+
+.service-heading p {
+    color: #DDE3F0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================
+   DETAILS LAYOUT
+========================================= */
+
+.details-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        340px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+
+/* =========================================
+   CONTENT CARD
+========================================= */
+
+.content-card {
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #E8ECF3;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.content-card h2 {
+    color: #02144B;
+
+    font-size: 20px;
+
+    margin-bottom: 13px;
+}
+
+
+.content-card > p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   INCLUDED LIST
+========================================= */
+
+.included-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+.included-item {
+    background: #F4F7FC;
+
+    border-radius: 8px;
+
+    padding: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.included-item i {
+    color: #EAB92F;
+
+    font-size: 15px;
+}
+
+
+.included-item span {
+    color: #02144B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.information-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.information-item {
+    background: #F4F7FC;
+
+    border-radius: 9px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.information-icon {
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #FFFFFF;
+
+    color: #EAB92F;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.information-item div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.information-item span {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+.information-item strong {
+    color: #02144B;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   NOTE CARD
+========================================= */
+
+.note-card {
+    background: #FFFFFF;
+
+    border-left: 4px solid #EAB92F;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    display: flex;
+
+    gap: 13px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+.note-icon {
+    color: #EAB92F;
+
+    font-size: 20px;
+}
+
+
+.note-card h3 {
+    color: #02144B;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.note-card p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.booking-sidebar {
+    position: sticky;
+
+    top: 20px;
+}
+
+
+
+/* =========================================
+   PROFESSIONAL CARD
+========================================= */
+
+.professional-card {
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #E8ECF3;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.professional-card-heading {
+    color: #777;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 16px;
+}
+
+
+.provider-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #E8ECF3;
+}
+
+
+.provider-profile img {
+    width: 65px;
+
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #F4F7FC;
+}
+
+
+.provider-profile h3 {
+    color: #02144B;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.provider-profile p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.provider-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 17px 0;
+}
+
+
+.provider-meta > span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+.provider-meta i {
+    color: #EAB92F;
+
+    width: 15px;
+}
+
+
+.provider-meta strong {
+    color: #02144B;
+}
+
+
+.profile-btn {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #02144B;
+
+    border-radius: 7px;
+
+    background: #FFFFFF;
+
+    color: #02144B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.profile-btn:hover {
+    background: #02144B;
+
+    color: #FFFFFF;
+}
+
+
+
+/* =========================================
+   PRICE CARD
+========================================= */
+
+.price-card {
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    padding: 24px;
+
+    border: 1px solid #E8ECF3;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+.price-label {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.price-card h2 {
+    color: #02144B;
+
+    font-size: 27px;
+
+    margin: 6px 0;
+}
+
+
+.price-card > p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.price-divider {
+    border-top: 1px solid #E8ECF3;
+
+    margin: 18px 0;
+}
+
+
+.price-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 13px;
+}
+
+
+.price-row span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.price-row strong {
+    color: #02144B;
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+.book-btn {
+    width: 100%;
+
+    border: none;
+
+    background: #02144B;
+
+    color: #FFFFFF;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+
+.book-btn:hover {
+    background: #EAB92F;
+
+    color: #02144B;
+}
+
+
+.secure-note {
+    text-align: center;
+
+    margin-top: 12px;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+.secure-note i {
+    color: #EAB92F;
+
+    margin-right: 4px;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #02144B;
+
+    color: #FFFFFF;
+
+    padding: 35px 0;
+}
+
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer h3 {
+    color: #EAB92F;
+
+    margin-bottom: 8px;
+}
+
+
+.footer p {
+    color: #DDE3F0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .booking-sidebar {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+
+    .nav-links a:nth-child(1),
+    .nav-links a:nth-child(2) {
+        display: none;
+    }
+
+
+    .service-hero {
+        padding: 25px;
+
+        align-items: flex-start;
+    }
+
+
+    .service-heading h1 {
+        font-size: 25px;
+    }
+
+
+    .included-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .information-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .details-page {
+        padding-top: 25px;
+    }
+
+
+    .service-hero {
+        flex-direction: column;
+    }
+
+
+    .service-icon-large {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 22px;
+    }
+
+
+    .service-heading h1 {
+        font-size: 22px;
+    }
+
+
+    .content-card {
+        padding: 20px;
+    }
+
+
+    .professional-card,
+    .price-card {
+        padding: 20px;
+    }
+
+}

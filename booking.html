@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Service | Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Next <span>Vork</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+
+            <a href="my-bookings.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                My Bookings
+            </a>
+
+            <span class="user-name" id="userName"></span>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="booking-header">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="professional-services.html" id="backServices">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Services
+            </a>
+        </div>
+
+        <span class="section-label">BOOK SERVICE</span>
+
+        <h1>Book Your Service</h1>
+
+        <p>
+            Provide your service location, preferred schedule and work details.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="booking-page">
+
+    <div class="container booking-layout">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <div class="booking-form-section">
+
+
+            <!-- Selected Service -->
+
+            <div class="booking-card selected-service-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <h2>Selected Service</h2>
+                        <p>Your selected professional and service</p>
+                    </div>
+
+                </div>
+
+
+                <div class="selected-service">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+
+                    <div class="service-info">
+
+                        <h3 id="serviceName">
+                            Loading...
+                        </h3>
+
+                        <p id="professionalName">
+                            Loading...
+                        </p>
+
+                        <div class="service-meta">
+
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                <span id="serviceDuration">--</span>
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span id="professionalLocation">--</span>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Customer Details -->
+
+            <div class="booking-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h2>Customer Details</h2>
+                        <p>Your contact information</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="error-message" id="fullNameError"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="error-message" id="phoneError"></small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service Location -->
+
+            <div class="booking-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <h2>Service Location</h2>
+                        <p>Where should the professional provide the service?</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="serviceAddress">
+                        Full Address
+                        <span>*</span>
+                    </label>
+
+                    <div class="textarea-wrapper">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <textarea
+                            id="serviceAddress"
+                            rows="4"
+                            placeholder="Enter house number, street, area, city and pincode"
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <small class="error-message" id="addressError"></small>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-city"></i>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="Enter city"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pincode">
+                            Pincode
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-map-pin"></i>
+
+                            <input
+                                type="text"
+                                id="pincode"
+                                placeholder="Enter pincode"
+                                maxlength="6"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="error-message" id="pincodeError"></small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Schedule -->
+
+            <div class="booking-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+
+                    <div>
+                        <h2>Preferred Schedule</h2>
+                        <p>Choose your preferred service date and time</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="serviceDate">
+                            Preferred Date
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="serviceDate"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="error-message" id="dateError"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="serviceTime">
+                            Preferred Time
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            <select id="serviceTime" required>
+
+                                <option value="">
+                                    Select preferred time
+                                </option>
+
+                                <option value="08:00 AM">
+                                    08:00 AM
+                                </option>
+
+                                <option value="09:00 AM">
+                                    09:00 AM
+                                </option>
+
+                                <option value="10:00 AM">
+                                    10:00 AM
+                                </option>
+
+                                <option value="11:00 AM">
+                                    11:00 AM
+                                </option>
+
+                                <option value="12:00 PM">
+                                    12:00 PM
+                                </option>
+
+                                <option value="01:00 PM">
+                                    01:00 PM
+                                </option>
+
+                                <option value="02:00 PM">
+                                    02:00 PM
+                                </option>
+
+                                <option value="03:00 PM">
+                                    03:00 PM
+                                </option>
+
+                                <option value="04:00 PM">
+                                    04:00 PM
+                                </option>
+
+                                <option value="05:00 PM">
+                                    05:00 PM
+                                </option>
+
+                                <option value="06:00 PM">
+                                    06:00 PM
+                                </option>
+
+                                <option value="07:00 PM">
+                                    07:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <small class="error-message" id="timeError"></small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+                        This is your preferred schedule. Final availability
+                        will be confirmed before the booking is completed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Work Details -->
+
+            <div class="booking-card">
+
+                <div class="card-title">
+
+                    <div class="title-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <h2>Work Details</h2>
+                        <p>Tell the professional about your requirements</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="workDetails">
+                        Requirements / Work Description
+                    </label>
+
+                    <textarea
+                        id="workDetails"
+                        rows="6"
+                        placeholder="Example: I need a 2BHK house plan for a 1200 sq.ft plot. Please contact me before starting the work."
+                    ></textarea>
+
+                    <small>
+                        Add measurements, requirements, materials or any
+                        additional information if needed.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Terms -->
+
+            <div class="booking-terms">
+
+                <label class="checkbox-wrapper">
+
+                    <input
+                        type="checkbox"
+                        id="termsCheckbox"
+                    >
+
+                    <span class="checkmark"></span>
+
+                    <span>
+                        I confirm that the information provided is correct
+                        and I agree to the Next Vork booking terms.
+                    </span>
+
+                </label>
+
+                <small
+                    class="error-message"
+                    id="termsError"
+                ></small>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button
+                class="continue-btn"
+                id="continueBtn"
+            >
+
+                Continue to Confirmation
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= RIGHT ================= -->
+
+        <aside class="booking-summary">
+
+            <div class="summary-card">
+
+                <div class="summary-header">
+
+                    <h2>Booking Summary</h2>
+
+                    <span class="secure-badge">
+                        <i class="fa-solid fa-lock"></i>
+                        Secure
+                    </span>
+
+                </div>
+
+
+                <div class="summary-service">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div>
+
+                        <h3 id="summaryServiceName">
+                            Loading...
+                        </h3>
+
+                        <p id="summaryProfessional">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        Duration
+                    </span>
+
+                    <strong id="summaryDuration">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Location
+                    </span>
+
+                    <strong id="summaryLocation">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="price-section">
+
+                    <span>Service Price</span>
+
+                    <strong id="summaryPrice">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="price-type" id="summaryPriceType">
+                    Starting price
+                </div>
+
+
+                <div class="summary-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <p>
+                        Your booking details are protected.
+                        Payment will be handled in the next step.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Help -->
+
+            <div class="help-card">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+
+                    <h3>Need Help?</h3>
+
+                    <p>
+                        If you have any questions about the service,
+                        contact Next Vork support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>Next <span>Vork</span></h3>
+
+                <p>
+                    Find trusted construction professionals
+                    for your next project.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="categories.html">Categories</a>
+
+                <a href="my-bookings.html">My Bookings</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/booking.js"></script>
+
+</body>
+</html>
