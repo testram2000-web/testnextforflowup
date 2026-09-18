@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirm Booking | Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking-confirmation.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Next <span>Vork</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="categories.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Categories
+            </a>
+
+            <a href="my-bookings.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                My Bookings
+            </a>
+
+            <span class="user-name" id="userName"></span>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="confirmation-header">
+
+    <div class="container">
+
+        <span class="section-label">
+            BOOKING CONFIRMATION
+        </span>
+
+        <h1>Review Your Booking</h1>
+
+        <p>
+            Please check your booking details before continuing to payment.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="confirmation-page">
+
+    <div class="container">
+
+
+        <!-- Progress -->
+
+        <div class="booking-progress">
+
+            <div class="progress-step completed">
+
+                <div class="progress-circle">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span>Booking Details</span>
+
+            </div>
+
+
+            <div class="progress-line active"></div>
+
+
+            <div class="progress-step current">
+
+                <div class="progress-circle">
+                    2
+                </div>
+
+                <span>Confirmation</span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-circle">
+                    3
+                </div>
+
+                <span>Payment</span>
+
+            </div>
+
+
+            <div class="progress-line"></div>
+
+
+            <div class="progress-step">
+
+                <div class="progress-circle">
+                    4
+                </div>
+
+                <span>Success</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Layout -->
+
+        <div class="confirmation-layout">
+
+
+            <!-- ================= LEFT ================= -->
+
+            <div class="confirmation-content">
+
+
+                <!-- Booking ID -->
+
+                <div class="booking-id-card">
+
+                    <div class="booking-id-icon">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <div>
+
+                        <span>Booking Reference</span>
+
+                        <strong id="bookingId">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Service -->
+
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Service Details</h2>
+
+                            <p>
+                                Selected service and professional
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="service-box">
+
+                        <div class="service-main-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div class="service-main-info">
+
+                            <h3 id="serviceName">
+                                --
+                            </h3>
+
+                            <p id="professionalName">
+                                --
+                            </p>
+
+                            <div class="service-tags">
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span id="duration">--</span>
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span id="professionalLocation">--</span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Customer -->
+
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Customer Details</h2>
+
+                            <p>
+                                Contact information
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail-grid">
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Full Name
+                            </span>
+
+                            <strong id="customerName">
+                                --
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Phone Number
+                            </span>
+
+                            <strong id="customerPhone">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Service Location</h2>
+
+                            <p>
+                                Where the service will be provided
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="location-box">
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        <div>
+
+                            <strong id="serviceAddress">
+                                --
+                            </strong>
+
+                            <p>
+
+                                <span id="serviceCity">
+                                    --
+                                </span>
+
+                                -
+
+                                <span id="servicePincode">
+                                    --
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Schedule -->
+
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Schedule</h2>
+
+                            <p>
+                                Your preferred service schedule
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="schedule-grid">
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-icon">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Preferred Date
+                                </span>
+
+                                <strong id="serviceDate">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Preferred Time
+                                </span>
+
+                                <strong id="serviceTime">
+                                    --
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Work Details -->
+
+                <div class="confirmation-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>Work Requirements</h2>
+
+                            <p>
+                                Additional information provided
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="work-details" id="workDetails">
+
+                        No additional requirements provided.
+
+                    </div>
+
+                </div>
+
+
+                <!-- Important Note -->
+
+                <div class="important-note">
+
+                    <div class="note-icon">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Before You Continue</h3>
+
+                        <p>
+                            Please verify your service, location, date,
+                            time and contact details. You will proceed
+                            to payment after confirming this booking.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Actions -->
+
+                <div class="confirmation-actions">
+
+                    <button
+                        class="back-btn"
+                        id="backBtn"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Edit Booking
+
+                    </button>
+
+
+                    <button
+                        class="confirm-btn"
+                        id="confirmBtn"
+                    >
+
+                        Confirm & Continue to Payment
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RIGHT ================= -->
+
+            <aside class="confirmation-sidebar">
+
+
+                <!-- Price -->
+
+                <div class="price-card">
+
+                    <div class="price-card-header">
+
+                        <h2>Payment Summary</h2>
+
+                        <span>
+                            <i class="fa-solid fa-lock"></i>
+                            Secure
+                        </span>
+
+                    </div>
+
+
+                    <div class="price-service">
+
+                        <span>
+                            Service
+                        </span>
+
+                        <strong id="summaryService">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Service Price
+                        </span>
+
+                        <strong id="servicePrice">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Pricing
+                        </span>
+
+                        <strong
+                            id="priceType"
+                            class="price-type"
+                        >
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-divider"></div>
+
+
+                    <div class="total-row">
+
+                        <span>
+                            Total Amount
+                        </span>
+
+                        <strong id="totalPrice">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <p class="payment-note">
+
+                        Final payment amount may be subject to
+                        professional confirmation where applicable.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Secure -->
+
+                <div class="secure-card">
+
+                    <div class="secure-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Secure Booking</h3>
+
+                        <p>
+                            Your booking information is securely
+                            stored for the next step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Help -->
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Need Help?</h3>
+
+                        <p>
+                            Contact Next Vork support if you have
+                            questions about your booking.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    Next <span>Vork</span>
+                </h3>
+
+                <p>
+                    Find trusted construction professionals
+                    for your next project.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/booking-confirmation.js"></script>
+
+</body>
+
+</html>
