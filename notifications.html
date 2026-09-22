@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications - Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notifications.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="categories.html" class="logo">
+                <span class="logo-icon">NV</span>
+                <span>Next Vork</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="categories.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    My Bookings
+                </a>
+
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="notification-header">
+
+        <div class="container">
+
+            <span class="section-label">
+                <i class="fa-solid fa-bell"></i>
+                UPDATES
+            </span>
+
+            <h1>Notifications</h1>
+
+            <p>
+                Stay updated about your bookings, payments and services.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOTIFICATIONS ================= -->
+
+    <main class="notifications-section">
+
+        <div class="container notifications-container">
+
+            <!-- TOP BAR -->
+
+            <div class="notifications-top">
+
+                <div>
+                    <h2>Your Notifications</h2>
+
+                    <p id="notificationCount">
+                        0 notifications
+                    </p>
+                </div>
+
+                <button
+                    id="markAllReadBtn"
+                    class="mark-read-btn"
+                >
+                    <i class="fa-solid fa-check-double"></i>
+                    Mark All as Read
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="notification-filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="unread"
+                >
+                    Unread
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="booking"
+                >
+                    Bookings
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="payment"
+                >
+                    Payments
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="status"
+                >
+                    Service Status
+                </button>
+
+            </div>
+
+
+            <!-- NOTIFICATION LIST -->
+
+            <div
+                id="notificationList"
+                class="notification-list"
+            ></div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-regular fa-bell-slash"></i>
+                </div>
+
+                <h3>No Notifications</h3>
+
+                <p>
+                    You don't have any notifications right now.
+                </p>
+
+                <a
+                    href="categories.html"
+                    class="browse-btn"
+                >
+                    Browse Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <h3>Next Vork</h3>
+
+                <p>
+                    Find trusted construction professionals
+                    and book services easily.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/notifications.js"></script>
+
+</body>
+</html>
