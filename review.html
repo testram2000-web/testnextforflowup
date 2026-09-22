@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Write Review - Next Vork</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/review.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-next">Next</span><span class="logo-vork">Vork</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html" class="active">
+                    My Bookings
+                </a>
+
+                <span class="nav-user" id="navUser">
+                    Hello
+                </span>
+
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="review-header">
+
+        <div class="container">
+
+            <a href="my-bookings.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to My Bookings
+            </a>
+
+            <span class="section-label">
+                SERVICE REVIEW
+            </span>
+
+            <h1>
+                Share Your Experience
+            </h1>
+
+            <p>
+                Your feedback helps us improve Next Vork and helps other customers.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="review-section">
+
+        <div class="container">
+
+            <div class="review-layout">
+
+
+                <!-- ================= REVIEW FORM ================= -->
+
+                <section class="review-card">
+
+                    <div class="review-heading">
+
+                        <div class="review-heading-icon">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Rate Your Experience
+                            </h2>
+
+                            <p>
+                                Tell us how your service went.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STAR RATING -->
+
+                    <div class="rating-section">
+
+                        <span class="form-label">
+                            Overall Rating
+                        </span>
+
+                        <div class="stars" id="stars">
+
+                            <button
+                                type="button"
+                                class="star"
+                                data-rating="1"
+                                aria-label="1 star"
+                            >
+                                <i class="fa-regular fa-star"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="star"
+                                data-rating="2"
+                                aria-label="2 stars"
+                            >
+                                <i class="fa-regular fa-star"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="star"
+                                data-rating="3"
+                                aria-label="3 stars"
+                            >
+                                <i class="fa-regular fa-star"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="star"
+                                data-rating="4"
+                                aria-label="4 stars"
+                            >
+                                <i class="fa-regular fa-star"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="star"
+                                data-rating="5"
+                                aria-label="5 stars"
+                            >
+                                <i class="fa-regular fa-star"></i>
+                            </button>
+
+                        </div>
+
+                        <p
+                            class="rating-text"
+                            id="ratingText"
+                        >
+                            Select a rating
+                        </p>
+
+                        <input
+                            type="hidden"
+                            id="rating"
+                            value="0"
+                        >
+
+                    </div>
+
+
+                    <!-- REVIEW -->
+
+                    <div class="form-group">
+
+                        <label for="reviewText">
+                            Your Review
+                        </label>
+
+                        <textarea
+                            id="reviewText"
+                            rows="6"
+                            maxlength="500"
+                            placeholder="Tell us about your experience with the professional and service..."
+                        ></textarea>
+
+                        <div class="character-count">
+                            <span id="characterCount">0</span>/500
+                        </div>
+
+                    </div>
+
+
+                    <!-- SERVICE QUALITY -->
+
+                    <div class="quality-section">
+
+                        <span class="form-label">
+                            How was the service?
+                        </span>
+
+                        <div class="quality-options">
+
+                            <button
+                                type="button"
+                                class="quality-btn"
+                                data-quality="Excellent"
+                            >
+                                <i class="fa-regular fa-face-laugh-beam"></i>
+                                Excellent
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quality-btn"
+                                data-quality="Good"
+                            >
+                                <i class="fa-regular fa-face-smile"></i>
+                                Good
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quality-btn"
+                                data-quality="Average"
+                            >
+                                <i class="fa-regular fa-face-meh"></i>
+                                Average
+                            </button>
+
+                            <button
+                                type="button"
+                                class="quality-btn"
+                                data-quality="Poor"
+                            >
+                                <i class="fa-regular fa-face-frown"></i>
+                                Poor
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="quality"
+                            value=""
+                        >
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="button"
+                        class="submit-btn"
+                        id="submitReviewBtn"
+                    >
+                        <i class="fa-regular fa-paper-plane"></i>
+                        Submit Review
+                    </button>
+
+
+                    <p
+                        class="form-message"
+                        id="formMessage"
+                    ></p>
+
+                </section>
+
+
+                <!-- ================= BOOKING SUMMARY ================= -->
+
+                <aside class="review-sidebar">
+
+
+                    <!-- SERVICE CARD -->
+
+                    <div class="sidebar-card">
+
+                        <span class="sidebar-label">
+                            SERVICE
+                        </span>
+
+                        <h2 id="serviceName">
+                            --
+                        </h2>
+
+                        <p id="categoryName">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROFESSIONAL CARD -->
+
+                    <div class="sidebar-card professional-card">
+
+                        <div class="sidebar-title">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <span>
+                                Professional
+                            </span>
+
+                        </div>
+
+                        <div class="professional-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3 id="professionalName">
+                            --
+                        </h3>
+
+                        <p id="professionalProfession">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <!-- BOOKING CARD -->
+
+                    <div class="sidebar-card booking-card">
+
+                        <div class="sidebar-title">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            <span>
+                                Booking
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-row">
+
+                            <span>
+                                Booking ID
+                            </span>
+
+                            <strong id="bookingId">
+                                --
+                            </strong>
+
+                        </div>
+
+
+                        <div class="booking-row">
+
+                            <span>
+                                Service Date
+                            </span>
+
+                            <strong id="serviceDate">
+                                --
+                            </strong>
+
+                        </div>
+
+
+                        <div class="booking-row">
+
+                            <span>
+                                Amount
+                            </span>
+
+                            <strong id="paymentAmount">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTE -->
+
+                    <div class="review-note">
+
+                        <div class="note-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Your Feedback Matters
+                            </h3>
+
+                            <p>
+                                Honest feedback helps professionals improve
+                                their service quality.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-next">Next</span><span class="logo-vork">Vork</span>
+                    </a>
+
+                    <p>
+                        Find trusted construction professionals for your project.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="categories.html">
+                        Categories
+                    </a>
+
+                    <a href="my-bookings.html">
+                        My Bookings
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Next Vork. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/review.js"></script>
+
+</body>
+</html>
