@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Next Vork</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="categories.html" class="logo">
+                <span class="logo-icon">NV</span>
+                <span>Next Vork</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="categories.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    My Bookings
+                </a>
+
+                <a href="profile.html" class="active">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="profile-header">
+        <div class="container">
+
+            <span class="section-label">
+                <i class="fa-solid fa-user"></i>
+                MY ACCOUNT
+            </span>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your personal information and account details.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ================= PROFILE CONTENT ================= -->
+    <main class="profile-section">
+        <div class="container profile-layout">
+
+            <!-- LEFT PROFILE CARD -->
+            <aside class="profile-sidebar">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    C
+                </div>
+
+                <h2 id="sidebarName">Customer</h2>
+
+                <p id="sidebarPhone">+91 XXXXX XXXXX</p>
+
+                <div class="profile-badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Customer Account
+                </div>
+
+            </aside>
+
+
+            <!-- RIGHT PROFILE FORM -->
+            <section class="profile-card">
+
+                <div class="card-header">
+                    <div>
+                        <span class="small-label">
+                            ACCOUNT INFORMATION
+                        </span>
+
+                        <h2>Personal Details</h2>
+
+                        <p>
+                            Update your basic account information.
+                        </p>
+                    </div>
+
+                    <div class="header-icon">
+                        <i class="fa-solid fa-user-pen"></i>
+                    </div>
+                </div>
+
+
+                <form id="profileForm">
+
+                    <!-- NAME -->
+                    <div class="form-group">
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- MOBILE -->
+                    <div class="form-group">
+                        <label for="phone">
+                            Mobile Number
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter mobile number"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                        <small>
+                            Your mobile number is used for login.
+                        </small>
+                    </div>
+
+
+                    <!-- CUSTOMER ID -->
+                    <div class="form-group">
+                        <label for="customerId">
+                            Customer ID
+                        </label>
+
+                        <div class="input-wrapper readonly-input">
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="customerId"
+                                readonly
+                            >
+                        </div>
+
+                        <small>
+                            Customer ID cannot be changed.
+                        </small>
+                    </div>
+
+
+                    <!-- ACCOUNT CREATED -->
+                    <div class="account-info">
+
+                        <div class="info-item">
+                            <span class="info-label">
+                                Account Created
+                            </span>
+
+                            <strong id="accountCreated">
+                                -
+                            </strong>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">
+                                Account Status
+                            </span>
+
+                            <strong class="status-active">
+                                <i class="fa-solid fa-circle"></i>
+                                Active
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div
+                        id="profileMessage"
+                        class="profile-message"
+                    ></div>
+
+
+                    <!-- BUTTONS -->
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            id="cancelBtn"
+                            class="btn btn-secondary"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- ================= ACCOUNT ACTIONS ================= -->
+    <section class="account-actions-section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span class="small-label">
+                    ACCOUNT
+                </span>
+
+                <h2>Quick Actions</h2>
+            </div>
+
+
+            <div class="action-grid">
+
+                <a href="my-bookings.html" class="action-card">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>My Bookings</h3>
+
+                        <p>
+                            View and track your service bookings.
+                        </p>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </a>
+
+
+                <a href="categories.html" class="action-card">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <div>
+                        <h3>Find a Service</h3>
+
+                        <p>
+                            Browse professionals and services.
+                        </p>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </a>
+
+
+                <a href="notifications.html" class="action-card">
+
+                    <div class="action-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div>
+                        <h3>Notifications</h3>
+
+                        <p>
+                            Check your booking updates.
+                        </p>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <h3>Next Vork</h3>
+
+                <p>
+                    Find trusted construction professionals
+                    and book services easily.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Next Vork. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
